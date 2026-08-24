@@ -15,20 +15,15 @@ type ZoomImageProps = {
   /** Continuous slow "breathing" zoom, for hero-scale hold shots. */
   ambient?: boolean;
   priority?: boolean;
-  /**
-   * "cover" (default) fills the frame edge-to-edge — for full-bleed
-   * editorial photography. "product" frames the shot on a tinted studio
-   * backdrop so a light-background catalog/product photo reads as
-   * designed, not pasted, against the dark theme.
-   */
-  fit?: "cover" | "product";
 };
 
 /**
  * A photo that zooms in slightly as it scrolls into view, then (optionally)
- * keeps a slow ambient breathing zoom. Falls back to a branded gradient
- * placeholder if the image fails to load, so a bad URL never shows as a
- * broken-image icon.
+ * keeps a slow ambient breathing zoom. A duotone treatment (grayscale +
+ * brand-color overlay via mix-blend-mode) folds any source photo — studio
+ * shot or editorial — into the site's own palette so nothing reads as
+ * pasted in; hovering lifts the overlay to reveal true color. Falls back to
+ * a branded gradient placeholder if the image fails to load.
  */
 export default function ZoomImage({
   src,
@@ -36,7 +31,6 @@ export default function ZoomImage({
   className = "",
   ambient = false,
   priority = false,
-  fit = "cover",
 }: ZoomImageProps) {
   const frameRef = useRef<HTMLDivElement>(null);
   const imgRef = useRef<HTMLImageElement>(null);
@@ -55,7 +49,7 @@ export default function ZoomImage({
       return;
     }
 
-    const startScale = fit === "product" ? 1.1 : 1.22;
+    const startScale = 1.22;
     const ctx = gsap.context(() => {
       gsap.fromTo(
         img,
@@ -85,19 +79,10 @@ export default function ZoomImage({
     }, frame);
 
     return () => ctx.revert();
-  }, [ambient, fit]);
-
-  const isProduct = fit === "product";
+  }, [ambient]);
 
   return (
-    <div
-      ref={frameRef}
-      className={`relative overflow-hidden ${
-        isProduct
-          ? "bg-[radial-gradient(circle_at_50%_40%,color-mix(in_oklab,var(--color-accent)_10%,var(--color-card)),var(--color-card)_75%)]"
-          : ""
-      } ${className}`}
-    >
+    <div ref={frameRef} className={`group relative overflow-hidden ${className}`}>
       {!failed ? (
         <img
           ref={imgRef}
@@ -105,11 +90,7 @@ export default function ZoomImage({
           alt={alt}
           loading={priority ? "eager" : "lazy"}
           onError={() => setFailed(true)}
-          className={`absolute will-change-transform ${
-            isProduct
-              ? "inset-[8%] h-[84%] w-[84%] object-contain [filter:contrast(1.06)_saturate(1.05)]"
-              : "inset-0 h-full w-full object-cover"
-          }`}
+          className="absolute inset-0 h-full w-full object-cover will-change-transform grayscale-[70%] contrast-110 brightness-75 transition-[filter] duration-700 group-hover:grayscale-0 group-hover:brightness-100"
         />
       ) : (
         <div className="absolute inset-0 bg-[linear-gradient(135deg,var(--color-card),var(--color-muted))] flex items-center justify-center">
@@ -118,12 +99,18 @@ export default function ZoomImage({
           </span>
         </div>
       )}
-      {!isProduct && (
-        <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+      {!failed && (
+        <div
+          aria-hidden
+          className="absolute inset-0 mix-blend-color bg-[linear-gradient(160deg,var(--color-accent)_0%,var(--color-background)_70%)] opacity-40 transition-opacity duration-700 group-hover:opacity-0"
+        />
       )}
-      {isProduct && (
-        <div className="absolute inset-0 shadow-[inset_0_0_60px_20px_var(--color-card)] pointer-events-none" />
-      )}
+      {/* Fades the photo's own edges into the page background — no hard rectangle. */}
+      <div
+        aria-hidden
+        className="absolute inset-0 transition-opacity duration-700 group-hover:opacity-40 [background:radial-gradient(ellipse_at_center,transparent_35%,var(--color-background)_100%)]"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
     </div>
   );
 }

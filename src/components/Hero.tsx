@@ -99,12 +99,11 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="hero-frame relative aspect-[4/5] w-full max-w-md mx-auto md:max-w-none rounded-sm border border-border bg-card">
+        <div className="hero-frame relative aspect-[4/5] w-full max-w-md mx-auto md:max-w-none rounded-sm">
           <ZoomImage
             src="/images/kyotex-1.jpg"
             alt="Sistema Kyotex K System — máquina aplicadora de cinta autoadhesiva sobre base metálica"
-            className="h-full w-full"
-            fit="product"
+            className="h-full w-full rounded-sm"
             ambient
             priority
           />

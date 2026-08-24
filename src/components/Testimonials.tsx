@@ -31,12 +31,11 @@ export default function Testimonials() {
               ensambladas después.
             </p>
           </div>
-          <div className="reveal-item relative aspect-[4/3] rounded-sm overflow-hidden border border-border bg-card">
+          <div className="reveal-item relative aspect-[4/3] rounded-sm">
             <ZoomImage
               src="/images/kyotex-2.jpeg"
               alt="Máquina Kyotex KYO101 con rodillos de aplicación de cinta y soporte de mesa"
-              className="h-full w-full"
-              fit="product"
+              className="h-full w-full rounded-sm"
             />
           </div>
         </div>
