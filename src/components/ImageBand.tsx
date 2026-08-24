@@ -2,6 +2,7 @@
 
 import { useReveal } from "@/lib/useReveal";
 import ZoomImage from "@/components/ZoomImage";
+import RevealHeading from "@/components/RevealHeading";
 
 export default function ImageBand() {
   const ref = useReveal<HTMLDivElement>(".reveal-item");
@@ -19,9 +20,9 @@ export default function ImageBand() {
           <p className="reveal-item text-accent text-sm tracking-[0.3em] uppercase mb-4">
             Presentes en la industria
           </p>
-          <h2 className="reveal-item font-display text-3xl sm:text-4xl md:text-5xl leading-tight text-balance max-w-2xl">
+          <RevealHeading className="font-display text-3xl sm:text-4xl md:text-5xl leading-tight text-balance max-w-2xl">
             Sistemas Kyotex, en piso de planta y en cada feria del sector.
-          </h2>
+          </RevealHeading>
         </div>
       </div>
     </section>

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Manrope } from "next/font/google";
-import Cursor from "@/components/Cursor";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -49,7 +48,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <div className="grain-overlay" aria-hidden />
-        <Cursor />
         {children}
       </body>
     </html>

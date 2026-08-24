@@ -2,6 +2,7 @@
 
 import { useReveal } from "@/lib/useReveal";
 import { onSpotlightMove } from "@/lib/spotlight";
+import RevealHeading from "@/components/RevealHeading";
 
 const SYSTEMS = [
   {
@@ -41,9 +42,9 @@ export default function ProductShowcase() {
           <p className="text-accent text-sm tracking-[0.3em] uppercase mb-4">
             Líneas de producto
           </p>
-          <h2 className="font-display text-4xl sm:text-5xl leading-tight text-balance">
+          <RevealHeading className="font-display text-4xl sm:text-5xl leading-tight text-balance">
             Cinco sistemas. Una sola filosofía de emplantillado.
-          </h2>
+          </RevealHeading>
         </div>
 
         <p className="md:hidden text-muted-foreground text-xs uppercase tracking-[0.2em] px-6 mb-4">

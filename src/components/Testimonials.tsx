@@ -3,6 +3,7 @@
 import { useReveal } from "@/lib/useReveal";
 import CountUp from "@/components/CountUp";
 import ZoomImage from "@/components/ZoomImage";
+import RevealHeading from "@/components/RevealHeading";
 
 const STATS = [
   { value: 2006, label: "Fundación, parte de ALC Gruppo" },
@@ -11,19 +12,23 @@ const STATS = [
 ];
 
 export default function Testimonials() {
-  const ref = useReveal<HTMLDivElement>(".reveal-item", { stagger: 0.1 });
+  const introRef = useReveal<HTMLDivElement>(".reveal-item", { stagger: 0.12 });
+  const statsRef = useReveal<HTMLDivElement>(".reveal-item", { stagger: 0.1 });
 
   return (
     <section id="machinery" className="py-[var(--space-section)]">
       <div className="mx-auto max-w-7xl px-6 md:px-10">
-        <div className="grid md:grid-cols-2 gap-16 md:gap-8 items-center mb-16">
+        <div
+          ref={introRef}
+          className="grid md:grid-cols-2 gap-16 md:gap-8 items-center mb-16"
+        >
           <div>
             <p className="reveal-item text-accent text-sm tracking-[0.3em] uppercase mb-4">
               Maquinaria Kyo
             </p>
-            <h2 className="reveal-item font-display text-4xl sm:text-5xl leading-tight text-balance mb-6">
+            <RevealHeading className="font-display text-4xl sm:text-5xl leading-tight text-balance mb-6">
               Adhesivo y maquinaria, diseñados en conjunto.
-            </h2>
+            </RevealHeading>
             <p className="reveal-item text-secondary text-lg leading-relaxed max-w-md">
               Nuestros equipos de aplicación se construyen junto a cada
               sistema adhesivo que enviamos — así, dosificación, laminado y
@@ -41,7 +46,7 @@ export default function Testimonials() {
         </div>
 
         <div
-          ref={ref}
+          ref={statsRef}
           className="grid sm:grid-cols-3 gap-8 border-t border-border pt-12"
         >
           {STATS.map((s) => (

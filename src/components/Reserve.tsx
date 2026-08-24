@@ -1,10 +1,11 @@
 "use client";
 
 import { useReveal } from "@/lib/useReveal";
+import RevealHeading from "@/components/RevealHeading";
 import { useState, type FormEvent } from "react";
 
 export default function Reserve() {
-  const ref = useReveal<HTMLDivElement>(".reveal-item");
+  const ref = useReveal<HTMLDivElement>(".reveal-item", { stagger: 0.1 });
   const [status, setStatus] = useState<"idle" | "submitted">("idle");
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -17,14 +18,14 @@ export default function Reserve() {
       id="contact"
       className="py-[var(--space-section)] bg-card border-t border-border"
     >
-      <div className="mx-auto max-w-3xl px-6 md:px-10 text-center">
-        <div ref={ref}>
+      <div ref={ref} className="mx-auto max-w-3xl px-6 md:px-10 text-center">
+        <div>
           <p className="reveal-item text-accent text-sm tracking-[0.3em] uppercase mb-4">
             Habla con nuestro equipo técnico
           </p>
-          <h2 className="reveal-item font-display text-4xl sm:text-5xl leading-tight text-balance mb-6">
+          <RevealHeading className="font-display text-4xl sm:text-5xl leading-tight text-balance mb-6">
             Definamos el sistema correcto para tu línea.
-          </h2>
+          </RevealHeading>
           <p className="reveal-item text-secondary text-lg mb-12 max-w-xl mx-auto">
             Cuéntanos tu volumen de producción y materiales, y un
             especialista técnico de Kyotex te enviará una recomendación.

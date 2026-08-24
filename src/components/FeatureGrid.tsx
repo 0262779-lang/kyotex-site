@@ -2,6 +2,7 @@
 
 import { useReveal } from "@/lib/useReveal";
 import { onSpotlightMove } from "@/lib/spotlight";
+import RevealHeading from "@/components/RevealHeading";
 
 const FEATURES = [
   {
@@ -27,18 +28,19 @@ const FEATURES = [
 ];
 
 export default function FeatureGrid() {
+  const introRef = useReveal<HTMLDivElement>(".reveal-item");
   const ref = useReveal<HTMLDivElement>(".reveal-item", { stagger: 0.1 });
 
   return (
     <section id="sustainability" className="py-[var(--space-section)] bg-card">
       <div className="mx-auto max-w-7xl px-6 md:px-10">
-        <div className="max-w-2xl mb-16">
+        <div ref={introRef} className="max-w-2xl mb-16">
           <p className="reveal-item text-accent text-sm tracking-[0.3em] uppercase mb-4">
             Por qué eligen Kyotex los fabricantes
           </p>
-          <h2 className="reveal-item font-display text-4xl sm:text-5xl leading-tight text-balance">
+          <RevealHeading className="font-display text-4xl sm:text-5xl leading-tight text-balance">
             Diseñado para la línea, no para el laboratorio.
-          </h2>
+          </RevealHeading>
         </div>
 
         <div
