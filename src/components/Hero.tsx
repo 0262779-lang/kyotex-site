@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useMagnetic } from "@/lib/useMagnetic";
 import ZoomImage from "@/components/ZoomImage";
+import CornerMarks from "@/components/CornerMarks";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -66,7 +67,7 @@ export default function Hero() {
             Parte de ALC Gruppo — desde 2006
           </p>
 
-          <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.05] text-balance mb-8">
+          <h1 className="font-display text-[clamp(2.75rem,4vw+1.6rem,4.5rem)] leading-[1.05] text-balance mb-8">
             <span className="hero-title-line block overflow-hidden">
               Sistemas de emplantillado
             </span>
@@ -107,6 +108,7 @@ export default function Hero() {
             ambient
             priority
           />
+          <CornerMarks />
         </div>
       </div>
     </section>

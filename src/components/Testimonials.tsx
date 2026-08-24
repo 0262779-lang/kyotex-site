@@ -4,6 +4,7 @@ import { useReveal } from "@/lib/useReveal";
 import CountUp from "@/components/CountUp";
 import ZoomImage from "@/components/ZoomImage";
 import RevealHeading from "@/components/RevealHeading";
+import CornerMarks from "@/components/CornerMarks";
 
 const STATS = [
   { value: 2006, label: "Fundación, parte de ALC Gruppo" },
@@ -26,7 +27,7 @@ export default function Testimonials() {
             <p className="reveal-item text-accent text-sm tracking-[0.3em] uppercase mb-4">
               Maquinaria Kyo
             </p>
-            <RevealHeading className="font-display text-4xl sm:text-5xl leading-tight text-balance mb-6">
+            <RevealHeading className="font-display text-[clamp(1.875rem,3vw+1.4rem,3rem)] leading-tight text-balance mb-6">
               Adhesivo y maquinaria, diseñados en conjunto.
             </RevealHeading>
             <p className="reveal-item text-secondary text-lg leading-relaxed max-w-md">
@@ -42,6 +43,7 @@ export default function Testimonials() {
               alt="Máquina Kyotex KYO101 con rodillos de aplicación de cinta y soporte de mesa"
               className="h-full w-full rounded-sm"
             />
+            <CornerMarks />
           </div>
         </div>
 

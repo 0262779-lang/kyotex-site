@@ -38,7 +38,7 @@ export default function FeatureGrid() {
           <p className="reveal-item text-accent text-sm tracking-[0.3em] uppercase mb-4">
             Por qué eligen Kyotex los fabricantes
           </p>
-          <RevealHeading className="font-display text-4xl sm:text-5xl leading-tight text-balance">
+          <RevealHeading className="font-display text-[clamp(1.875rem,3vw+1.4rem,3rem)] leading-tight text-balance">
             Diseñado para la línea, no para el laboratorio.
           </RevealHeading>
         </div>

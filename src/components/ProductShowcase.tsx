@@ -42,7 +42,7 @@ export default function ProductShowcase() {
           <p className="text-accent text-sm tracking-[0.3em] uppercase mb-4">
             Líneas de producto
           </p>
-          <RevealHeading className="font-display text-4xl sm:text-5xl leading-tight text-balance">
+          <RevealHeading className="font-display text-[clamp(1.875rem,3vw+1.4rem,3rem)] leading-tight text-balance">
             Cinco sistemas. Una sola filosofía de emplantillado.
           </RevealHeading>
         </div>

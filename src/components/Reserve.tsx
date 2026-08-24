@@ -23,7 +23,7 @@ export default function Reserve() {
           <p className="reveal-item text-accent text-sm tracking-[0.3em] uppercase mb-4">
             Habla con nuestro equipo técnico
           </p>
-          <RevealHeading className="font-display text-4xl sm:text-5xl leading-tight text-balance mb-6">
+          <RevealHeading className="font-display text-[clamp(1.875rem,3vw+1.4rem,3rem)] leading-tight text-balance mb-6">
             Definamos el sistema correcto para tu línea.
           </RevealHeading>
           <p className="reveal-item text-secondary text-lg mb-12 max-w-xl mx-auto">
