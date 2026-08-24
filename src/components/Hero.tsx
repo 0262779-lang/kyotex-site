@@ -68,7 +68,7 @@ export default function Hero() {
 
           <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.05] text-balance mb-8">
             <span className="hero-title-line block overflow-hidden">
-              Sistemas de encolado
+              Sistemas de emplantillado
             </span>
             <span className="hero-title-line block overflow-hidden">
               para <span className="text-accent">calzado</span> que perdura.
@@ -99,7 +99,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="hero-frame relative aspect-[4/5] w-full max-w-md mx-auto md:max-w-none rounded-sm">
+        <div className="hero-frame relative aspect-[4/3] w-full max-w-md mx-auto md:mx-0 md:ml-auto rounded-sm">
           <ZoomImage
             src="/images/kyotex-1.jpg"
             alt="Sistema Kyotex K System — máquina aplicadora de cinta autoadhesiva sobre base metálica"

@@ -7,7 +7,7 @@ const SYSTEMS = [
   {
     code: "K System",
     title: "Cintas autoadhesivas",
-    copy: "Sistemas de cinta PSA autoadhesiva para un encolado limpio e instantáneo — sin hornos, sin llama abierta, sin evaporación de solventes.",
+    copy: "Sistemas de cinta PSA autoadhesiva para un emplantillado limpio e instantáneo — sin hornos, sin llama abierta, sin evaporación de solventes.",
   },
   {
     code: "K Thermo",
@@ -16,7 +16,7 @@ const SYSTEMS = [
   },
   {
     code: "K Next",
-    title: "Tecnología de encolado en frío",
+    title: "Tecnología de emplantillado en frío",
     copy: "La fuerza de adhesión de un termoadhesivo, aplicada sin calor directo — pensada para células de alto rendimiento.",
   },
   {
@@ -42,7 +42,7 @@ export default function ProductShowcase() {
             Líneas de producto
           </p>
           <h2 className="font-display text-4xl sm:text-5xl leading-tight text-balance">
-            Cinco sistemas. Una sola filosofía de encolado.
+            Cinco sistemas. Una sola filosofía de emplantillado.
           </h2>
         </div>
 

@@ -1,8 +1,8 @@
 const ITEMS = [
   "Manufactura de calzado",
   "Marroquinería",
-  "Encolado libre de solventes",
-  "Tecnología de encolado en frío",
+  "Emplantillado libre de solventes",
+  "Tecnología de emplantillado en frío",
   "Laminación de precisión",
   "Sistemas certificados ISO",
 ];

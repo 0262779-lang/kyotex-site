@@ -75,12 +75,12 @@ export default function Reserve() {
             />
 
             <label htmlFor="message" className="sr-only">
-              ¿Qué necesitas encolar?
+              ¿Qué necesitas emplantillar?
             </label>
             <textarea
               id="message"
               rows={4}
-              placeholder="¿Qué necesitas encolar, y a qué volumen?"
+              placeholder="¿Qué necesitas emplantillar, y a qué volumen?"
               className="w-full px-5 py-4 bg-background border border-border text-foreground placeholder:text-muted-foreground focus-ring rounded-sm resize-none"
             />
 
