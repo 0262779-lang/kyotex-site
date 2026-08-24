@@ -15,6 +15,13 @@ type ZoomImageProps = {
   /** Continuous slow "breathing" zoom, for hero-scale hold shots. */
   ambient?: boolean;
   priority?: boolean;
+  /**
+   * "cover" (default) fills the frame edge-to-edge — for full-bleed
+   * editorial photography. "product" frames the shot on a tinted studio
+   * backdrop so a light-background catalog/product photo reads as
+   * designed, not pasted, against the dark theme.
+   */
+  fit?: "cover" | "product";
 };
 
 /**
@@ -29,6 +36,7 @@ export default function ZoomImage({
   className = "",
   ambient = false,
   priority = false,
+  fit = "cover",
 }: ZoomImageProps) {
   const frameRef = useRef<HTMLDivElement>(null);
   const imgRef = useRef<HTMLImageElement>(null);
@@ -47,12 +55,13 @@ export default function ZoomImage({
       return;
     }
 
+    const startScale = fit === "product" ? 1.1 : 1.22;
     const ctx = gsap.context(() => {
       gsap.fromTo(
         img,
-        { scale: 1.22 },
+        { scale: startScale },
         {
-          scale: ambient ? 1.08 : 1,
+          scale: ambient ? startScale - 0.14 : 1,
           ease: "none",
           scrollTrigger: {
             trigger: frame,
@@ -65,7 +74,7 @@ export default function ZoomImage({
 
       if (ambient) {
         gsap.to(img, {
-          scale: 1.15,
+          scale: startScale - 0.07,
           duration: 10,
           ease: "sine.inOut",
           repeat: -1,
@@ -76,10 +85,19 @@ export default function ZoomImage({
     }, frame);
 
     return () => ctx.revert();
-  }, [ambient]);
+  }, [ambient, fit]);
+
+  const isProduct = fit === "product";
 
   return (
-    <div ref={frameRef} className={`relative overflow-hidden ${className}`}>
+    <div
+      ref={frameRef}
+      className={`relative overflow-hidden ${
+        isProduct
+          ? "bg-[radial-gradient(circle_at_50%_40%,color-mix(in_oklab,var(--color-accent)_10%,var(--color-card)),var(--color-card)_75%)]"
+          : ""
+      } ${className}`}
+    >
       {!failed ? (
         <img
           ref={imgRef}
@@ -87,7 +105,11 @@ export default function ZoomImage({
           alt={alt}
           loading={priority ? "eager" : "lazy"}
           onError={() => setFailed(true)}
-          className="absolute inset-0 h-full w-full object-cover will-change-transform"
+          className={`absolute will-change-transform ${
+            isProduct
+              ? "inset-[8%] h-[84%] w-[84%] object-contain mix-blend-luminosity opacity-90 [filter:contrast(1.05)_saturate(0)] hover:[filter:contrast(1.05)_saturate(0.4)] transition-[filter] duration-500"
+              : "inset-0 h-full w-full object-cover"
+          }`}
         />
       ) : (
         <div className="absolute inset-0 bg-[linear-gradient(135deg,var(--color-card),var(--color-muted))] flex items-center justify-center">
@@ -96,7 +118,12 @@ export default function ZoomImage({
           </span>
         </div>
       )}
-      <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+      {!isProduct && (
+        <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+      )}
+      {isProduct && (
+        <div className="absolute inset-0 shadow-[inset_0_0_60px_20px_var(--color-card)] pointer-events-none" />
+      )}
     </div>
   );
 }

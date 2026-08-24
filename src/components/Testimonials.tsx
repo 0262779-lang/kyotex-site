@@ -36,6 +36,7 @@ export default function Testimonials() {
               src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?q=80&w=1400&auto=format&fit=crop"
               alt="Maquinaria automatizada de aplicación de adhesivo en una línea de manufactura"
               className="h-full w-full"
+              fit="product"
             />
           </div>
         </div>
