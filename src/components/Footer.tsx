@@ -7,20 +7,14 @@ export default function Footer() {
           &copy; {new Date().getFullYear()} Kyotex — una marca de ALC Gruppo.
           Todos los derechos reservados.
         </p>
-        <div className="flex gap-6 text-sm text-secondary">
-          <a
-            href="#"
-            className="hover:text-foreground transition-colors duration-200 focus-ring rounded-sm"
-          >
-            Privacidad
-          </a>
-          <a
-            href="#"
-            className="hover:text-foreground transition-colors duration-200 focus-ring rounded-sm"
-          >
-            Términos
-          </a>
-        </div>
+        <a
+          href="https://alcgruppo.com/en/brands/kyotex/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-secondary hover:text-foreground transition-colors duration-200 focus-ring rounded-sm"
+        >
+          alcgruppo.com
+        </a>
       </div>
     </footer>
   );
