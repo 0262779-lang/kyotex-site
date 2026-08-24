@@ -33,8 +33,8 @@ export default function Testimonials() {
           </div>
           <div className="reveal-item relative aspect-[4/3] rounded-sm overflow-hidden border border-border bg-card">
             <ZoomImage
-              src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?q=80&w=1400&auto=format&fit=crop"
-              alt="Maquinaria automatizada de aplicación de adhesivo en una línea de manufactura"
+              src="/images/kyotex-2.jpeg"
+              alt="Máquina Kyotex KYO101 con rodillos de aplicación de cinta y soporte de mesa"
               className="h-full w-full"
               fit="product"
             />

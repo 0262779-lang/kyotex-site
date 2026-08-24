@@ -101,8 +101,8 @@ export default function Hero() {
 
         <div className="hero-frame relative aspect-[4/5] w-full max-w-md mx-auto md:max-w-none rounded-sm border border-border bg-card">
           <ZoomImage
-            src="https://images.unsplash.com/photo-1520639888713-7851133b1ed0?q=80&w=1400&auto=format&fit=crop"
-            alt="Aplicación de precisión de adhesivo en una línea de producción de calzado"
+            src="/images/kyotex-1.jpg"
+            alt="Sistema Kyotex K System — máquina aplicadora de cinta autoadhesiva sobre base metálica"
             className="h-full w-full"
             fit="product"
             ambient

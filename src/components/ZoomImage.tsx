@@ -107,7 +107,7 @@ export default function ZoomImage({
           onError={() => setFailed(true)}
           className={`absolute will-change-transform ${
             isProduct
-              ? "inset-[8%] h-[84%] w-[84%] object-contain mix-blend-luminosity opacity-90 [filter:contrast(1.05)_saturate(0)] hover:[filter:contrast(1.05)_saturate(0.4)] transition-[filter] duration-500"
+              ? "inset-[8%] h-[84%] w-[84%] object-contain [filter:contrast(1.06)_saturate(1.05)]"
               : "inset-0 h-full w-full object-cover"
           }`}
         />

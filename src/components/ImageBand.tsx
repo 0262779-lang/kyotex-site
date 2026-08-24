@@ -9,18 +9,18 @@ export default function ImageBand() {
   return (
     <section className="relative h-[70vh] min-h-[420px] max-h-[720px] overflow-hidden">
       <ZoomImage
-        src="https://images.unsplash.com/photo-1533660870112-d537cee4210f?q=80&w=1920&auto=format&fit=crop"
-        alt="Artesano trabajando cuero en un taller de manufactura"
+        src="/images/kyotex-3.jpg"
+        alt="Sistemas Kyotex KYO100S y KYO101 presentados en una feria industrial"
         className="absolute inset-0 h-full w-full"
       />
       <div className="absolute inset-0 bg-background/40" />
       <div ref={ref} className="relative h-full flex items-end">
         <div className="mx-auto max-w-7xl w-full px-6 md:px-10 pb-16">
           <p className="reveal-item text-accent text-sm tracking-[0.3em] uppercase mb-4">
-            Precisión en cada capa
+            Presentes en la industria
           </p>
           <h2 className="reveal-item font-display text-3xl sm:text-4xl md:text-5xl leading-tight text-balance max-w-2xl">
-            De la lámina de cuero a la línea de montaje, sin perder control.
+            Sistemas Kyotex, en piso de planta y en cada feria del sector.
           </h2>
         </div>
       </div>
