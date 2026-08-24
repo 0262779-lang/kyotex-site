@@ -1,10 +1,10 @@
 const ITEMS = [
-  "Footwear manufacturing",
-  "Leather goods",
-  "Solvent-free bonding",
-  "Cold-bonding technology",
-  "Precision lamination",
-  "ISO-tested systems",
+  "Manufactura de calzado",
+  "Marroquinería",
+  "Encolado libre de solventes",
+  "Tecnología de encolado en frío",
+  "Laminación de precisión",
+  "Sistemas certificados ISO",
 ];
 
 export default function Marquee() {

@@ -2,12 +2,12 @@
 
 import { useReveal } from "@/lib/useReveal";
 import CountUp from "@/components/CountUp";
-import MachineryDiagram from "@/components/graphics/MachineryDiagram";
+import ZoomImage from "@/components/ZoomImage";
 
 const STATS = [
-  { value: 2006, label: "Founded, part of ALC Gruppo" },
-  { value: 5, label: "Adhesive & machinery systems" },
-  { value: 2, label: "Industries served: footwear & leather goods" },
+  { value: 2006, label: "Fundación, parte de ALC Gruppo" },
+  { value: 5, label: "Sistemas adhesivos y de maquinaria" },
+  { value: 2, label: "Industrias atendidas: calzado y marroquinería" },
 ];
 
 export default function Testimonials() {
@@ -19,20 +19,24 @@ export default function Testimonials() {
         <div className="grid md:grid-cols-2 gap-16 md:gap-8 items-center mb-16">
           <div>
             <p className="reveal-item text-accent text-sm tracking-[0.3em] uppercase mb-4">
-              Kyo Machinery
+              Maquinaria Kyo
             </p>
             <h2 className="reveal-item font-display text-4xl sm:text-5xl leading-tight text-balance mb-6">
-              Adhesive and machinery, engineered together.
+              Adhesivo y maquinaria, diseñados en conjunto.
             </h2>
             <p className="reveal-item text-secondary text-lg leading-relaxed max-w-md">
-              Our application equipment is built alongside every adhesive
-              system we ship — so dispensing, lamination, and cure behavior
-              are calibrated as one machine, not bolted together after the
-              fact.
+              Nuestros equipos de aplicación se construyen junto a cada
+              sistema adhesivo que enviamos — así, dosificación, laminado y
+              curado se calibran como una sola máquina, no como piezas
+              ensambladas después.
             </p>
           </div>
           <div className="reveal-item relative aspect-[4/3] rounded-sm overflow-hidden border border-border bg-card">
-            <MachineryDiagram className="absolute inset-0 h-full w-full text-foreground" />
+            <ZoomImage
+              src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?q=80&w=1400&auto=format&fit=crop"
+              alt="Maquinaria automatizada de aplicación de adhesivo en una línea de manufactura"
+              className="h-full w-full"
+            />
           </div>
         </div>
 

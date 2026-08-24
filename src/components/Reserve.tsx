@@ -20,14 +20,14 @@ export default function Reserve() {
       <div className="mx-auto max-w-3xl px-6 md:px-10 text-center">
         <div ref={ref}>
           <p className="reveal-item text-accent text-sm tracking-[0.3em] uppercase mb-4">
-            Talk to our technical team
+            Habla con nuestro equipo técnico
           </p>
           <h2 className="reveal-item font-display text-4xl sm:text-5xl leading-tight text-balance mb-6">
-            Let&apos;s spec the right system for your line.
+            Definamos el sistema correcto para tu línea.
           </h2>
           <p className="reveal-item text-secondary text-lg mb-12 max-w-xl mx-auto">
-            Tell us about your production volume and materials, and a Kyotex
-            technical specialist will follow up with a recommendation.
+            Cuéntanos tu volumen de producción y materiales, y un
+            especialista técnico de Kyotex te enviará una recomendación.
           </p>
         </div>
 
@@ -39,48 +39,48 @@ export default function Reserve() {
             <div className="grid sm:grid-cols-2 gap-3">
               <div>
                 <label htmlFor="name" className="sr-only">
-                  Full name
+                  Nombre completo
                 </label>
                 <input
                   id="name"
                   type="text"
                   required
-                  placeholder="Full name"
+                  placeholder="Nombre completo"
                   className="w-full h-14 px-5 bg-background border border-border text-foreground placeholder:text-muted-foreground focus-ring rounded-sm"
                 />
               </div>
               <div>
                 <label htmlFor="company" className="sr-only">
-                  Company
+                  Empresa
                 </label>
                 <input
                   id="company"
                   type="text"
                   required
-                  placeholder="Company"
+                  placeholder="Empresa"
                   className="w-full h-14 px-5 bg-background border border-border text-foreground placeholder:text-muted-foreground focus-ring rounded-sm"
                 />
               </div>
             </div>
 
             <label htmlFor="email" className="sr-only">
-              Work email
+              Correo laboral
             </label>
             <input
               id="email"
               type="email"
               required
-              placeholder="Work email"
+              placeholder="Correo laboral"
               className="w-full h-14 px-5 bg-background border border-border text-foreground placeholder:text-muted-foreground focus-ring rounded-sm"
             />
 
             <label htmlFor="message" className="sr-only">
-              What are you looking to bond?
+              ¿Qué necesitas encolar?
             </label>
             <textarea
               id="message"
               rows={4}
-              placeholder="What are you looking to bond, and at what volume?"
+              placeholder="¿Qué necesitas encolar, y a qué volumen?"
               className="w-full px-5 py-4 bg-background border border-border text-foreground placeholder:text-muted-foreground focus-ring rounded-sm resize-none"
             />
 
@@ -88,7 +88,7 @@ export default function Reserve() {
               type="submit"
               className="h-14 px-8 bg-accent text-accent-foreground text-sm tracking-wide font-medium hover:bg-accent/85 transition-colors duration-200 focus-ring rounded-sm"
             >
-              Request a quote
+              Solicitar cotización
             </button>
           </form>
         ) : (
@@ -96,10 +96,10 @@ export default function Reserve() {
             role="status"
             className="reveal-item border border-accent px-8 py-6 max-w-lg mx-auto"
           >
-            <p className="font-display text-xl mb-1">Request received.</p>
+            <p className="font-display text-xl mb-1">Solicitud recibida.</p>
             <p className="text-secondary text-sm">
-              A Kyotex technical specialist will reach out within one
-              business day.
+              Un especialista técnico de Kyotex se pondrá en contacto en un
+              día hábil.
             </p>
           </div>
         )}

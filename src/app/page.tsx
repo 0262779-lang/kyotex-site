@@ -2,6 +2,7 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
 import ProductShowcase from "@/components/ProductShowcase";
+import ImageBand from "@/components/ImageBand";
 import FeatureGrid from "@/components/FeatureGrid";
 import Testimonials from "@/components/Testimonials";
 import Reserve from "@/components/Reserve";
@@ -15,6 +16,7 @@ export default function Home() {
         <Hero />
         <Marquee />
         <ProductShowcase />
+        <ImageBand />
         <FeatureGrid />
         <Testimonials />
         <Reserve />

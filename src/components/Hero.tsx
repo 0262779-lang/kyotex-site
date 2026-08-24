@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useMagnetic } from "@/lib/useMagnetic";
-import BondLayers from "@/components/graphics/BondLayers";
+import ZoomImage from "@/components/ZoomImage";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -47,17 +47,6 @@ export default function Hero() {
           { opacity: 0, scale: 0.96, duration: 1.1, ease: "power2.out" },
           "-=0.9"
         );
-
-      gsap.to(".hero-frame svg", {
-        yPercent: 6,
-        ease: "none",
-        scrollTrigger: {
-          trigger: root,
-          start: "top top",
-          end: "bottom top",
-          scrub: true,
-        },
-      });
     }, root);
 
     return () => ctx.revert();
@@ -74,22 +63,22 @@ export default function Hero() {
       <div className="relative mx-auto max-w-7xl w-full px-6 md:px-10 grid md:grid-cols-2 gap-12 md:gap-8 items-center">
         <div>
           <p className="hero-eyebrow text-accent text-sm tracking-[0.3em] uppercase mb-6">
-            Part of ALC Gruppo — since 2006
+            Parte de ALC Gruppo — desde 2006
           </p>
 
           <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.05] text-balance mb-8">
             <span className="hero-title-line block overflow-hidden">
-              Bonding systems
+              Sistemas de encolado
             </span>
             <span className="hero-title-line block overflow-hidden">
-              for <span className="text-accent">footwear</span> that lasts.
+              para <span className="text-accent">calzado</span> que perdura.
             </span>
           </h1>
 
           <p className="hero-copy text-secondary text-lg leading-relaxed max-w-md mb-10">
-            Solvent-free adhesive systems, thermo-adhesives, and precision
-            application machinery — engineered for footwear and leather
-            goods manufacturing at industrial scale.
+            Sistemas adhesivos libres de solventes, termoadhesivos y
+            maquinaria de aplicación de precisión — diseñados para la
+            manufactura industrial de calzado y marroquinería.
           </p>
 
           <div className="flex flex-wrap items-center gap-4">
@@ -98,21 +87,26 @@ export default function Hero() {
               href="#contact"
               className="hero-cta inline-flex items-center justify-center h-14 px-8 bg-accent text-accent-foreground text-sm tracking-wide font-medium hover:bg-accent/85 transition-colors duration-200 focus-ring rounded-sm"
             >
-              Request a quote
+              Solicitar cotización
             </a>
             <a
               ref={secondaryCtaRef}
               href="#systems"
               className="hero-cta inline-flex items-center justify-center h-14 px-8 border border-border text-foreground text-sm tracking-wide hover:border-accent transition-colors duration-200 focus-ring rounded-sm"
             >
-              Explore our systems
+              Explorar sistemas
             </a>
           </div>
         </div>
 
-        <div className="hero-frame relative aspect-[4/5] w-full max-w-md mx-auto md:max-w-none rounded-sm overflow-hidden border border-border bg-card">
-          <BondLayers className="absolute inset-0 h-[112%] w-full text-foreground" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background/50 via-transparent to-transparent" />
+        <div className="hero-frame relative aspect-[4/5] w-full max-w-md mx-auto md:max-w-none rounded-sm border border-border bg-card">
+          <ZoomImage
+            src="https://images.unsplash.com/photo-1520639888713-7851133b1ed0?q=80&w=1400&auto=format&fit=crop"
+            alt="Aplicación de precisión de adhesivo en una línea de producción de calzado"
+            className="h-full w-full"
+            ambient
+            priority
+          />
         </div>
       </div>
     </section>

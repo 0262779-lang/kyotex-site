@@ -3,10 +3,10 @@
 import { useEffect, useState } from "react";
 
 const LINKS = [
-  { href: "#systems", label: "Systems" },
-  { href: "#sustainability", label: "Sustainability" },
-  { href: "#machinery", label: "Machinery" },
-  { href: "#contact", label: "Contact" },
+  { href: "#systems", label: "Sistemas" },
+  { href: "#sustainability", label: "Sostenibilidad" },
+  { href: "#machinery", label: "Maquinaria" },
+  { href: "#contact", label: "Contacto" },
 ];
 
 export default function Nav() {
@@ -52,7 +52,7 @@ export default function Nav() {
           href="#contact"
           className="hidden md:inline-flex items-center h-11 px-6 border border-accent text-accent text-sm tracking-wide hover:bg-accent hover:text-accent-foreground transition-colors duration-200 focus-ring rounded-sm"
         >
-          Request a quote
+          Solicitar cotización
         </a>
 
         <button

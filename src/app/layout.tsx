@@ -19,29 +19,32 @@ const siteUrl = "https://kyotex.example.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Kyotex — Sustainable bonding systems for footwear & leather goods",
+  title: "Kyotex — Sistemas de encolado sostenibles para calzado y marroquinería",
   description:
-    "Solvent-free adhesive systems, thermo-adhesives, and precision application machinery engineered for footwear and leather manufacturing. Part of ALC Gruppo since 2006.",
+    "Sistemas adhesivos libres de solventes, termoadhesivos y maquinaria de aplicación de precisión para la manufactura de calzado y marroquinería. Parte de ALC Gruppo desde 2006.",
   openGraph: {
-    title: "Kyotex — Sustainable bonding systems for footwear & leather goods",
+    title:
+      "Kyotex — Sistemas de encolado sostenibles para calzado y marroquinería",
     description:
-      "Solvent-free adhesive systems, thermo-adhesives, and precision application machinery engineered for footwear and leather manufacturing.",
+      "Sistemas adhesivos libres de solventes, termoadhesivos y maquinaria de aplicación de precisión para la manufactura de calzado y marroquinería.",
     url: siteUrl,
     siteName: "Kyotex",
+    locale: "es_MX",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kyotex — Sustainable bonding systems for footwear & leather goods",
+    title:
+      "Kyotex — Sistemas de encolado sostenibles para calzado y marroquinería",
     description:
-      "Solvent-free adhesive systems, thermo-adhesives, and precision application machinery engineered for footwear and leather manufacturing.",
+      "Sistemas adhesivos libres de solventes, termoadhesivos y maquinaria de aplicación de precisión para la manufactura de calzado y marroquinería.",
   },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
+      lang="es"
       className={`${spaceGrotesk.variable} ${manrope.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
