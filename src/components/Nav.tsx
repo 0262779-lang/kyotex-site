@@ -31,7 +31,7 @@ export default function Nav() {
       <div className="mx-auto max-w-7xl px-6 md:px-10 h-20 flex items-center justify-between">
         <a
           href="#top"
-          className="font-display text-xl tracking-[0.2em] focus-ring rounded-sm"
+          className="font-display text-xl tracking-[0.2em] focus-ring rounded-sm py-[10px] -my-[10px]"
         >
           KYOTEX
         </a>

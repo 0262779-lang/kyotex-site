@@ -11,7 +11,7 @@ export default function Footer() {
           href="https://alcgruppo.com/en/brands/kyotex/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm text-secondary hover:text-foreground transition-colors duration-200 focus-ring rounded-sm"
+          className="text-sm text-secondary hover:text-foreground transition-colors duration-200 focus-ring rounded-sm py-3 -my-3"
         >
           alcgruppo.com
         </a>
