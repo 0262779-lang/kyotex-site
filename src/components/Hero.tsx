@@ -58,7 +58,7 @@ export default function Hero() {
       ref={rootRef}
       className="relative min-h-[100svh] flex items-center pt-28 pb-16 overflow-hidden"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(228,71,44,0.14),_transparent_60%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(187,56,35,0.08),_transparent_60%)]" />
 
       <div className="relative mx-auto max-w-7xl w-full px-6 md:px-10 grid md:grid-cols-2 gap-12 md:gap-8 items-center">
         <div>

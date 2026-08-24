@@ -1,17 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0b0f0e;
-  --foreground: #eef2f0;
-  --color-primary: #eef2f0;
-  --color-secondary: #9aa8a3;
-  --color-accent: #e4472c;
-  --color-accent-foreground: #0b0f0e;
-  --color-card: #121917;
-  --color-card-foreground: #eef2f0;
-  --color-muted: #171e1c;
-  --color-muted-foreground: #7c8985;
-  --color-border: #232b28;
+  /* Light, steel-gray palette — matched to the tone of Kyotex's own
+     studio product photography so imagery and page read as one surface. */
+  --background: #eceeed;
+  --foreground: #14181a;
+  --color-primary: #14181a;
+  --color-secondary: #54605c;
+  --color-accent: #bb3823;
+  --color-accent-foreground: #ffffff;
+  --color-card: #f8f7f5;
+  --color-card-foreground: #14181a;
+  --color-muted: #e1e4e2;
+  --color-muted-foreground: #656e6b;
+  --color-border: #d3d7d5;
   --space-section: clamp(5rem, 10vw, 9rem);
 }
 

@@ -49,13 +49,15 @@ export default function ZoomImage({
       return;
     }
 
-    const startScale = 1.22;
+    // Kept subtle: the source photos are modest resolution, and a heavy
+    // zoom on top of object-cover upscaling reads as blur, not motion.
+    const startScale = 1.05;
     const ctx = gsap.context(() => {
       gsap.fromTo(
         img,
         { scale: startScale },
         {
-          scale: ambient ? startScale - 0.14 : 1,
+          scale: ambient ? startScale - 0.03 : 1,
           ease: "none",
           scrollTrigger: {
             trigger: frame,
@@ -68,8 +70,8 @@ export default function ZoomImage({
 
       if (ambient) {
         gsap.to(img, {
-          scale: startScale - 0.07,
-          duration: 10,
+          scale: startScale - 0.015,
+          duration: 12,
           ease: "sine.inOut",
           repeat: -1,
           yoyo: true,
@@ -90,7 +92,7 @@ export default function ZoomImage({
           alt={alt}
           loading={priority ? "eager" : "lazy"}
           onError={() => setFailed(true)}
-          className="absolute inset-0 h-full w-full object-cover will-change-transform grayscale-[70%] contrast-110 brightness-75 transition-[filter] duration-700 group-hover:grayscale-0 group-hover:brightness-100"
+          className="absolute inset-0 h-full w-full object-cover will-change-transform grayscale-[55%] contrast-105 brightness-100 transition-[filter] duration-700 group-hover:grayscale-0"
         />
       ) : (
         <div className="absolute inset-0 bg-[linear-gradient(135deg,var(--color-card),var(--color-muted))] flex items-center justify-center">

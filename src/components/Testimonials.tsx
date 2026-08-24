@@ -33,7 +33,7 @@ export default function Testimonials() {
           </div>
           <div className="reveal-item relative aspect-[4/3] rounded-sm">
             <ZoomImage
-              src="/images/kyotex-2.jpeg"
+              src="/images/kyotex-4.jpg"
               alt="Máquina Kyotex KYO101 con rodillos de aplicación de cinta y soporte de mesa"
               className="h-full w-full rounded-sm"
             />
