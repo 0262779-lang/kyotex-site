@@ -55,7 +55,7 @@ export default function Hero() {
       ref={rootRef}
       className="relative min-h-[100svh] flex items-center pt-28 pb-16 overflow-hidden"
     >
-      <div className="hero-frame absolute inset-0">
+      <div className="hero-frame absolute inset-4 md:inset-8 rounded-sm overflow-hidden">
         <HeroVideo
           webmSrc="/video/kyotex-hero.webm"
           mp4Src="/video/kyotex-hero.mp4"
@@ -64,7 +64,7 @@ export default function Hero() {
           className="h-full w-full"
         />
       </div>
-      <CornerMarks inset="inset-6 md:inset-8" />
+      <CornerMarks inset="inset-4 md:inset-8" />
 
       {/* Scrim: solid backdrop behind the copy, fading out toward the video so
           text stays legible without hiding the footage. Mobile stacks the
