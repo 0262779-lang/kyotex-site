@@ -92,7 +92,7 @@ export default function ZoomImage({
           alt={alt}
           loading={priority ? "eager" : "lazy"}
           onError={() => setFailed(true)}
-          className="absolute inset-0 h-full w-full object-cover will-change-transform grayscale-[55%] contrast-105 brightness-100 transition-[filter] duration-700 group-hover:grayscale-0"
+          className="absolute inset-0 h-full w-full object-cover will-change-transform"
         />
       ) : (
         <div className="absolute inset-0 bg-[linear-gradient(135deg,var(--color-card),var(--color-muted))] flex items-center justify-center">
@@ -101,16 +101,10 @@ export default function ZoomImage({
           </span>
         </div>
       )}
-      {!failed && (
-        <div
-          aria-hidden
-          className="absolute inset-0 mix-blend-color bg-[linear-gradient(160deg,var(--color-accent)_0%,var(--color-background)_70%)] opacity-40 transition-opacity duration-700 group-hover:opacity-0"
-        />
-      )}
       {/* Fades the photo's own edges into the page background — no hard rectangle. */}
       <div
         aria-hidden
-        className="absolute inset-0 transition-opacity duration-700 group-hover:opacity-40 [background:radial-gradient(ellipse_at_center,transparent_35%,var(--color-background)_100%)]"
+        className="absolute inset-0 [background:radial-gradient(ellipse_at_center,transparent_55%,var(--color-background)_100%)]"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
     </div>

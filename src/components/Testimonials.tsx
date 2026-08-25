@@ -2,9 +2,8 @@
 
 import { useReveal } from "@/lib/useReveal";
 import CountUp from "@/components/CountUp";
-import ZoomImage from "@/components/ZoomImage";
+import HeroVideo from "@/components/HeroVideo";
 import RevealHeading from "@/components/RevealHeading";
-import CornerMarks from "@/components/CornerMarks";
 
 const STATS = [
   { value: 2006, label: "Fundación, parte de ALC Gruppo" },
@@ -21,7 +20,7 @@ export default function Testimonials() {
       <div className="mx-auto max-w-7xl px-6 md:px-10">
         <div
           ref={introRef}
-          className="grid md:grid-cols-2 gap-16 md:gap-8 items-center mb-16"
+          className="grid md:grid-cols-[1fr_1.5fr] gap-16 md:gap-10 items-center mb-16"
         >
           <div>
             <p className="reveal-item text-accent text-sm tracking-[0.3em] uppercase mb-4">
@@ -37,13 +36,14 @@ export default function Testimonials() {
               ensambladas después.
             </p>
           </div>
-          <div className="reveal-item relative aspect-[4/3] rounded-sm">
-            <ZoomImage
-              src="/images/kyotex-4.jpg"
-              alt="Máquina Kyotex KYO101 con rodillos de aplicación de cinta y soporte de mesa"
+          <div className="reveal-item relative aspect-video rounded-sm">
+            <HeroVideo
+              webmSrc="/video/kyotex-machinery.webm"
+              mp4Src="/video/kyotex-machinery.mp4"
+              poster="/video/kyotex-machinery-poster.jpg"
+              label="Maquinaria Kyotex industrial en funcionamiento"
               className="h-full w-full rounded-sm"
             />
-            <CornerMarks />
           </div>
         </div>
 

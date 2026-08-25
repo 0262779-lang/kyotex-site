@@ -5,7 +5,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useMagnetic } from "@/lib/useMagnetic";
 import HeroVideo from "@/components/HeroVideo";
-import CornerMarks from "@/components/CornerMarks";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -55,23 +54,6 @@ export default function Hero() {
       ref={rootRef}
       className="relative min-h-[100svh] flex items-center pt-28 pb-16 overflow-hidden"
     >
-      <div className="hero-frame absolute inset-4 md:inset-8 rounded-sm overflow-hidden">
-        <HeroVideo
-          webmSrc="/video/kyotex-hero.webm"
-          mp4Src="/video/kyotex-hero.mp4"
-          poster="/video/kyotex-hero-poster.jpg"
-          label="Componentes de un sistema Kyotex separándose para mostrar su ensamblaje interno"
-          className="h-full w-full"
-        />
-      </div>
-      <CornerMarks inset="inset-4 md:inset-8" />
-
-      {/* Scrim: solid backdrop behind the copy, fading out toward the video so
-          text stays legible without hiding the footage. Mobile stacks the
-          copy over the full width, so it gets a bottom-heavy fade instead
-          of the desktop's left-to-right one. */}
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,var(--color-background)_0%,var(--color-background)_46%,color-mix(in_oklab,var(--color-background)_55%,transparent)_66%,transparent_88%)] md:bg-[linear-gradient(100deg,var(--color-background)_0%,var(--color-background)_38%,color-mix(in_oklab,var(--color-background)_55%,transparent)_58%,transparent_78%)]" />
-
       <div className="relative mx-auto max-w-7xl w-full px-6 md:px-10">
         <div className="max-w-xl">
           <p className="hero-eyebrow text-accent text-sm tracking-[0.3em] uppercase mb-6">
@@ -110,6 +92,16 @@ export default function Hero() {
             </a>
           </div>
         </div>
+      </div>
+
+      <div className="hero-frame absolute bottom-4 right-4 md:bottom-10 md:right-10 w-[46vw] max-w-[220px] sm:max-w-[280px] md:max-w-sm aspect-video rounded-sm overflow-hidden shadow-[0_8px_40px_-8px_rgba(0,0,0,0.25)]">
+        <HeroVideo
+          webmSrc="/video/kyotex-hero.webm"
+          mp4Src="/video/kyotex-hero.mp4"
+          poster="/video/kyotex-hero-poster.jpg"
+          label="Componentes de un sistema Kyotex separándose para mostrar su ensamblaje interno"
+          className="h-full w-full"
+        />
       </div>
     </section>
   );

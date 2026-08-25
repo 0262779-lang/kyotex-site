@@ -56,7 +56,7 @@ export default function HeroVideo({
           playsInline
           preload="metadata"
           onError={() => setFailed(true)}
-          className="absolute inset-0 h-full w-full object-cover grayscale-[55%] contrast-105 transition-[filter] duration-700 group-hover:grayscale-0"
+          className="absolute inset-0 h-full w-full object-cover"
         >
           <source src={webmSrc} type="video/webm" />
           <source src={mp4Src} type="video/mp4" />
@@ -68,15 +68,9 @@ export default function HeroVideo({
           </span>
         </div>
       )}
-      {!failed && (
-        <div
-          aria-hidden
-          className="absolute inset-0 mix-blend-color bg-[linear-gradient(160deg,var(--color-accent)_0%,var(--color-background)_70%)] opacity-40 transition-opacity duration-700 group-hover:opacity-0"
-        />
-      )}
       <div
         aria-hidden
-        className="absolute inset-0 transition-opacity duration-700 group-hover:opacity-40 [background:radial-gradient(ellipse_at_center,transparent_35%,var(--color-background)_100%)]"
+        className="absolute inset-0 [background:radial-gradient(ellipse_at_center,transparent_55%,var(--color-background)_100%)]"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
     </div>
