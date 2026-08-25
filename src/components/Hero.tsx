@@ -31,7 +31,8 @@ export default function Hero() {
 
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
-      tl.from(".hero-eyebrow", { opacity: 0, y: 16, duration: 0.7 })
+      tl.from(".hero-frame", { opacity: 0, scale: 1.06, duration: 1.3 })
+        .from(".hero-eyebrow", { opacity: 0, y: 16, duration: 0.7 }, "-=0.7")
         .from(
           ".hero-title-line",
           { opacity: 0, y: 40, duration: 1, stagger: 0.12 },
@@ -42,11 +43,6 @@ export default function Hero() {
           ".hero-cta",
           { opacity: 0, y: 16, duration: 0.7, stagger: 0.08 },
           "-=0.5"
-        )
-        .from(
-          ".hero-frame",
-          { opacity: 0, scale: 0.96, duration: 1.1, ease: "power2.out" },
-          "-=0.9"
         );
     }, root);
 
@@ -59,10 +55,25 @@ export default function Hero() {
       ref={rootRef}
       className="relative min-h-[100svh] flex items-center pt-28 pb-16 overflow-hidden"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(187,56,35,0.08),_transparent_60%)]" />
+      <div className="hero-frame absolute inset-0">
+        <HeroVideo
+          webmSrc="/video/kyotex-hero.webm"
+          mp4Src="/video/kyotex-hero.mp4"
+          poster="/video/kyotex-hero-poster.jpg"
+          label="Componentes de un sistema Kyotex separándose para mostrar su ensamblaje interno"
+          className="h-full w-full"
+        />
+      </div>
+      <CornerMarks inset="inset-6 md:inset-8" />
 
-      <div className="relative mx-auto max-w-7xl w-full px-6 md:px-10 grid md:grid-cols-2 gap-12 md:gap-8 items-center">
-        <div>
+      {/* Scrim: solid backdrop behind the copy, fading out toward the video so
+          text stays legible without hiding the footage. Mobile stacks the
+          copy over the full width, so it gets a bottom-heavy fade instead
+          of the desktop's left-to-right one. */}
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,var(--color-background)_0%,var(--color-background)_46%,color-mix(in_oklab,var(--color-background)_55%,transparent)_66%,transparent_88%)] md:bg-[linear-gradient(100deg,var(--color-background)_0%,var(--color-background)_38%,color-mix(in_oklab,var(--color-background)_55%,transparent)_58%,transparent_78%)]" />
+
+      <div className="relative mx-auto max-w-7xl w-full px-6 md:px-10">
+        <div className="max-w-xl">
           <p className="hero-eyebrow text-accent text-sm tracking-[0.3em] uppercase mb-6">
             Parte de ALC Gruppo — desde 2006
           </p>
@@ -93,22 +104,11 @@ export default function Hero() {
             <a
               ref={secondaryCtaRef}
               href="#systems"
-              className="hero-cta inline-flex items-center justify-center h-14 px-8 border border-border text-foreground text-sm tracking-wide hover:border-accent transition-colors duration-200 focus-ring rounded-sm"
+              className="hero-cta inline-flex items-center justify-center h-14 px-8 border border-border bg-background/70 backdrop-blur-sm text-foreground text-sm tracking-wide hover:border-accent transition-colors duration-200 focus-ring rounded-sm"
             >
               Explorar sistemas
             </a>
           </div>
-        </div>
-
-        <div className="hero-frame relative aspect-[4/3] w-full max-w-md mx-auto md:mx-0 md:ml-auto rounded-sm">
-          <HeroVideo
-            webmSrc="/video/kyotex-hero.webm"
-            mp4Src="/video/kyotex-hero.mp4"
-            poster="/video/kyotex-hero-poster.jpg"
-            label="Rodillo de aplicación de un sistema Kyotex en funcionamiento"
-            className="h-full w-full rounded-sm"
-          />
-          <CornerMarks />
         </div>
       </div>
     </section>
