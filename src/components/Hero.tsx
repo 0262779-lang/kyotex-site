@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useMagnetic } from "@/lib/useMagnetic";
-import ZoomImage from "@/components/ZoomImage";
+import HeroVideo from "@/components/HeroVideo";
 import CornerMarks from "@/components/CornerMarks";
 
 if (typeof window !== "undefined") {
@@ -101,12 +101,12 @@ export default function Hero() {
         </div>
 
         <div className="hero-frame relative aspect-[4/3] w-full max-w-md mx-auto md:mx-0 md:ml-auto rounded-sm">
-          <ZoomImage
-            src="/images/kyotex-1.jpg"
-            alt="Sistema Kyotex K System — máquina aplicadora de cinta autoadhesiva sobre base metálica"
+          <HeroVideo
+            webmSrc="/video/kyotex-hero.webm"
+            mp4Src="/video/kyotex-hero.mp4"
+            poster="/video/kyotex-hero-poster.jpg"
+            label="Rodillo de aplicación de un sistema Kyotex en funcionamiento"
             className="h-full w-full rounded-sm"
-            ambient
-            priority
           />
           <CornerMarks />
         </div>
