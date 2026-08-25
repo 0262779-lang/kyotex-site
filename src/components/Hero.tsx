@@ -54,7 +54,7 @@ export default function Hero() {
       ref={rootRef}
       className="relative min-h-[100svh] flex items-center pt-28 pb-16 overflow-hidden"
     >
-      <div className="relative w-full pl-6 md:pl-10 flex flex-col md:flex-row md:items-end gap-10 md:gap-12">
+      <div className="relative w-full pl-6 md:pl-10 flex flex-col md:flex-row md:items-end gap-10 md:gap-0">
         <div className="max-w-xl shrink-0">
           <p className="hero-eyebrow text-accent text-sm tracking-[0.3em] uppercase mb-6">
             Parte de ALC Gruppo — desde 2006
