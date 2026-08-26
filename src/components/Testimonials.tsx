@@ -8,7 +8,7 @@ import RevealHeading from "@/components/RevealHeading";
 const STATS = [
   { value: 2006, label: "Fundación, parte de ALC Gruppo" },
   { value: 5, label: "Sistemas adhesivos y de maquinaria" },
-  { value: 2, label: "Industrias atendidas: calzado y marroquinería" },
+  { symbol: "∞", label: "Millones de posibilidades" },
 ];
 
 export default function Testimonials() {
@@ -53,10 +53,16 @@ export default function Testimonials() {
         >
           {STATS.map((s) => (
             <div key={s.label} className="reveal-item">
-              <CountUp
-                to={s.value}
-                className="font-display text-4xl text-accent block mb-2 tabular-nums"
-              />
+              {"symbol" in s ? (
+                <span className="font-display text-4xl text-accent block mb-2 tabular-nums">
+                  {s.symbol}
+                </span>
+              ) : (
+                <CountUp
+                  to={s.value}
+                  className="font-display text-4xl text-accent block mb-2 tabular-nums"
+                />
+              )}
               <span className="text-secondary text-sm leading-relaxed">
                 {s.label}
               </span>

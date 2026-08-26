@@ -11,9 +11,9 @@ const FEATURES = [
     copy: "Menores emisiones de COV en planta, sin comprometer la fuerza de unión ni la velocidad de curado.",
   },
   {
-    n: "∞",
+    n: "02",
     title: "Diseñado para volumen",
-    copy: "Sistemas afinados para líneas de alto rendimiento de calzado y marroquinería, no solo para prototipos. Es el único adhesivo que puedes aplicar hoy y utilizarlo posteriormente. Millones de posibilidades.",
+    copy: "Sistemas afinados para líneas de alto rendimiento de calzado y marroquinería, no solo para prototipos. Es el único adhesivo que puedes aplicar hoy y utilizarlo posteriormente.",
   },
   {
     n: "03",
