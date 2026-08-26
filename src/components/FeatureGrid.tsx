@@ -11,9 +11,9 @@ const FEATURES = [
     copy: "Menores emisiones de COV en planta, sin comprometer la fuerza de unión ni la velocidad de curado.",
   },
   {
-    n: "02",
+    n: "∞",
     title: "Diseñado para volumen",
-    copy: "Sistemas afinados para líneas de alto rendimiento de calzado y marroquinería, no solo para prototipos.",
+    copy: "Sistemas afinados para líneas de alto rendimiento de calzado y marroquinería, no solo para prototipos. Es el único adhesivo que puedes aplicar hoy y utilizarlo posteriormente. Millones de posibilidades.",
   },
   {
     n: "03",
@@ -39,7 +39,7 @@ export default function FeatureGrid() {
             Por qué eligen Kyotex los fabricantes
           </p>
           <RevealHeading className="font-display text-[clamp(1.875rem,3vw+1.4rem,3rem)] leading-tight text-balance">
-            Diseñado para la línea, no para el laboratorio.
+            Diseñado para alta productividad y desarrollo fuera de la línea de producción.
           </RevealHeading>
         </div>
 

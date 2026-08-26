@@ -57,15 +57,15 @@ export default function Hero() {
       <div className="relative w-full pl-6 md:pl-10 flex flex-col md:flex-row md:items-end gap-10 md:gap-0">
         <div className="w-fit max-w-xl shrink-0">
           <p className="hero-eyebrow text-accent text-sm tracking-[0.3em] uppercase mb-6">
-            Parte de ALC Gruppo — desde 2006
+            Kyotex-Terlan Norteamérica — desde 2006
           </p>
 
-          <h1 className="font-display text-[clamp(2.75rem,4vw+1.6rem,4.5rem)] leading-[1.05] text-balance mb-8">
+          <h1 className="font-display text-[clamp(2.25rem,3.4vw+1.4rem,3.75rem)] leading-[1.1] text-balance mb-8">
             <span className="hero-title-line block overflow-hidden">
-              Sistemas de emplantillado
+              Sistema ecológico de adhesivado
             </span>
             <span className="hero-title-line block overflow-hidden">
-              para <span className="text-accent">calzado</span> que perdura.
+              aprobado por la <span className="text-accent">FDA US</span>.
             </span>
           </h1>
 
