@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const siteUrl = "https://kyotex-site.vercel.app";
+const siteUrl = "https://kyotex.company";
 
 export default function robots(): MetadataRoute.Robots {
   return {
