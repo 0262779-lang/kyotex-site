@@ -18,6 +18,9 @@ const siteUrl = "https://kyotex-site.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  verification: {
+    google: "VLzCnqc7WANevKwGiLcUz0YFL9I3VW5mdA7KTi3xivk",
+  },
   title: "Kyotex — Sistemas de emplantillado sostenibles para calzado y marroquinería",
   description:
     "Sistemas adhesivos libres de solventes, termoadhesivos y maquinaria de aplicación de precisión para la manufactura de calzado y marroquinería. Parte de ALC Gruppo desde 2006.",
