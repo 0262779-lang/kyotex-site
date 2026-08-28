@@ -14,7 +14,7 @@ const manrope = Manrope({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-const siteUrl = "https://kyotex.example.com";
+const siteUrl = "https://kyotex-site.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
