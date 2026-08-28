@@ -140,8 +140,7 @@ export default function Reserve() {
           >
             <p className="font-display text-xl mb-1">Solicitud recibida.</p>
             <p className="text-secondary text-sm">
-              Un especialista técnico de Kyotex se pondrá en contacto en un
-              día hábil.
+              Un especialista de Kyotex se pondrá en contacto.
             </p>
           </div>
         )}
