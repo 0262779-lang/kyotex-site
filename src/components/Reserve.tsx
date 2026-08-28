@@ -4,12 +4,48 @@ import { useReveal } from "@/lib/useReveal";
 import RevealHeading from "@/components/RevealHeading";
 import { useState, type FormEvent } from "react";
 
+const QUOTE_EMAIL = "logistics.support.terlan@gmail.com";
+const QUOTE_WHATSAPP = "523335981722";
+
 export default function Reserve() {
   const ref = useReveal<HTMLDivElement>(".reveal-item", { stagger: 0.1 });
-  const [status, setStatus] = useState<"idle" | "submitted">("idle");
+  const [status, setStatus] = useState<"idle" | "submitting" | "submitted">(
+    "idle"
+  );
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setStatus("submitting");
+
+    const form = new FormData(e.currentTarget);
+    const name = String(form.get("name") ?? "");
+    const company = String(form.get("company") ?? "");
+    const email = String(form.get("email") ?? "");
+    const message = String(form.get("message") ?? "");
+
+    try {
+      await fetch(`https://formsubmit.co/ajax/${QUOTE_EMAIL}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          _subject: `Nueva solicitud de cotización — ${name || company}`,
+          Nombre: name,
+          Empresa: company,
+          "Correo del cliente": email,
+          Mensaje: message || "(sin detalle)",
+        }),
+      });
+    } catch {
+      // El correo puede fallar sin conexión; el WhatsApp sigue disponible.
+    }
+
+    const waText = encodeURIComponent(
+      `Nueva solicitud de cotización Kyotex\nNombre: ${name}\nEmpresa: ${company}\nCorreo: ${email}\nMensaje: ${
+        message || "(sin detalle)"
+      }`
+    );
+    window.open(`https://wa.me/${QUOTE_WHATSAPP}?text=${waText}`, "_blank");
+
     setStatus("submitted");
   }
 
@@ -32,7 +68,7 @@ export default function Reserve() {
           </p>
         </div>
 
-        {status === "idle" ? (
+        {status !== "submitted" ? (
           <form
             onSubmit={handleSubmit}
             className="reveal-item grid gap-3 max-w-lg mx-auto text-left"
@@ -44,6 +80,7 @@ export default function Reserve() {
                 </label>
                 <input
                   id="name"
+                  name="name"
                   type="text"
                   required
                   placeholder="Nombre completo"
@@ -56,6 +93,7 @@ export default function Reserve() {
                 </label>
                 <input
                   id="company"
+                  name="company"
                   type="text"
                   required
                   placeholder="Empresa"
@@ -69,6 +107,7 @@ export default function Reserve() {
             </label>
             <input
               id="email"
+              name="email"
               type="email"
               required
               placeholder="Correo laboral"
@@ -80,6 +119,7 @@ export default function Reserve() {
             </label>
             <textarea
               id="message"
+              name="message"
               rows={4}
               placeholder="¿Qué necesitas emplantillar, y a qué volumen?"
               className="w-full px-5 py-4 bg-background border border-border text-foreground placeholder:text-muted-foreground focus-ring rounded-sm resize-none"
@@ -87,9 +127,10 @@ export default function Reserve() {
 
             <button
               type="submit"
-              className="h-14 px-8 bg-accent text-accent-foreground text-sm tracking-wide font-medium hover:bg-accent/85 transition-colors duration-200 focus-ring rounded-sm"
+              disabled={status === "submitting"}
+              className="h-14 px-8 bg-accent text-accent-foreground text-sm tracking-wide font-medium hover:bg-accent/85 transition-colors duration-200 focus-ring rounded-sm disabled:opacity-60"
             >
-              Solicitar cotización
+              {status === "submitting" ? "Enviando..." : "Solicitar cotización"}
             </button>
           </form>
         ) : (
