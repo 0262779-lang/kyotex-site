@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Manrope } from "next/font/google";
 import "./globals.css";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from "@/lib/site";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-display",
@@ -14,32 +15,25 @@ const manrope = Manrope({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-const siteUrl = "https://kyotex.company";
-
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
   verification: {
     google: "VLzCnqc7WANevKwGiLcUz0YFL9I3VW5mdA7KTi3xivk",
   },
-  title: "Kyotex — Sistemas de emplantillado sostenibles para calzado y marroquinería",
-  description:
-    "Sistemas adhesivos libres de solventes, termoadhesivos y maquinaria de aplicación de precisión para la manufactura de calzado y marroquinería. Parte de ALC Gruppo desde 2006.",
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
   openGraph: {
-    title:
-      "Kyotex — Sistemas de emplantillado sostenibles para calzado y marroquinería",
-    description:
-      "Sistemas adhesivos libres de solventes, termoadhesivos y maquinaria de aplicación de precisión para la manufactura de calzado y marroquinería.",
-    url: siteUrl,
-    siteName: "Kyotex",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
+    siteName: SITE_NAME,
     locale: "es_MX",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Kyotex — Sistemas de emplantillado sostenibles para calzado y marroquinería",
-    description:
-      "Sistemas adhesivos libres de solventes, termoadhesivos y maquinaria de aplicación de precisión para la manufactura de calzado y marroquinería.",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
   },
 };
 

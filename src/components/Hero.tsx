@@ -56,11 +56,11 @@ export default function Hero() {
     >
       <div className="relative w-full pl-6 md:pl-10 flex flex-col md:flex-row md:items-end gap-10 md:gap-0">
         <div className="w-fit max-w-xl shrink-0">
-          <p className="hero-eyebrow text-accent text-sm tracking-[0.3em] uppercase mb-6">
-            Kyotex-Terlan Norteamérica — desde 2006
-          </p>
-
+          {/* La marca va dentro del h1 para que el título principal diga "Kyotex". */}
           <h1 className="font-display text-[clamp(2.25rem,3.4vw+1.4rem,3.75rem)] leading-[1.1] text-balance mb-8">
+            <span className="hero-eyebrow block font-sans text-accent text-sm leading-5 tracking-[0.3em] uppercase text-wrap mb-6">
+              Kyotex-Terlan Norteamérica — desde 2006
+            </span>
             <span className="hero-title-line block overflow-hidden">
               Sistema ecológico de adhesivado
             </span>
