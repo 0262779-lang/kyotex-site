@@ -2,16 +2,15 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   async redirects() {
-    return [
-      {
-        // La URL de Vercel manda al dominio propio (el mismo SITE_URL de src/lib/site.ts),
-        // así Google indexa un solo sitio.
-        source: "/:path*",
-        has: [{ type: "host", value: "kyotex-site.vercel.app" }],
-        destination: "https://kyotex.company/:path*",
-        permanent: true,
-      },
-    ];
+    // La URL de Vercel y la versión con www mandan al dominio principal (el mismo
+    // SITE_URL de src/lib/site.ts), así Google indexa un solo sitio. No configurar
+    // en Vercel la redirección contraria (kyotex.company → www): se haría un ciclo.
+    return ["kyotex-site.vercel.app", "www.kyotex.company"].map((host) => ({
+      source: "/:path*",
+      has: [{ type: "host" as const, value: host }],
+      destination: "https://kyotex.company/:path*",
+      permanent: true,
+    }));
   },
 };
 
