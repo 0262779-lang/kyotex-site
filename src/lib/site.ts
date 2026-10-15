@@ -1,9 +1,9 @@
 // Datos del sitio que comparten los metadatos, el sitemap, robots.txt y los
 // datos estructurados. Si cambia el dominio o el nombre, se cambia solo aquí
 // (y en el destino de la redirección de next.config.ts).
-// La versión principal es con "www", la que Google eligió; kyotex.company sin
-// "www" debe redirigir a esta desde Vercel → Settings → Domains.
-export const SITE_URL = "https://www.kyotex.company";
+// La versión principal es sin "www": Vercel ya redirige www.kyotex.company a
+// esta, así que no hay que forzar ninguna redirección entre las dos en código.
+export const SITE_URL = "https://kyotex.company";
 export const SITE_NAME = "Kyotex";
 export const ORG_NAME = "Kyotex-Terlan Norteamérica";
 

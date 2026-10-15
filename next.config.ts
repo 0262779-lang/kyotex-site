@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
         // así Google indexa un solo sitio.
         source: "/:path*",
         has: [{ type: "host", value: "kyotex-site.vercel.app" }],
-        destination: "https://www.kyotex.company/:path*",
+        destination: "https://kyotex.company/:path*",
         permanent: true,
       },
     ];
