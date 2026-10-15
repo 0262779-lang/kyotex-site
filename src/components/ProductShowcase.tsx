@@ -61,7 +61,7 @@ export default function ProductShowcase() {
             <div
               key={s.code}
               onMouseMove={onSpotlightMove}
-              className="spotlight-card reveal-item shrink-0 w-[82vw] sm:w-[60vw] md:w-auto snap-start bg-card p-8 flex flex-col hover:bg-background hover:scale-[1.03] transition-[background-color,transform] duration-300"
+              className="spotlight-card reveal-item shrink-0 w-[82vw] sm:w-[60vw] md:w-auto snap-start bg-card p-8 flex flex-col hover:bg-background hover:scale-[1.03] transition-[background-color,scale] duration-300"
             >
               <span className="font-display text-accent text-sm tracking-wide mb-4">
                 {s.code}

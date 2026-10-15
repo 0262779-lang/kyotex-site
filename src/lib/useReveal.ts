@@ -47,6 +47,8 @@ export function useReveal<T extends HTMLElement>(
         duration,
         stagger,
         ease: "power3.out",
+        // Al terminar, quita el transform en línea para que el hover:scale de CSS vuelva a funcionar.
+        clearProps: "transform,translate,rotate,scale",
         scrollTrigger: {
           trigger: root,
           start,

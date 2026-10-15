@@ -54,6 +54,52 @@ body {
   color: var(--color-accent-foreground);
 }
 
+/* Entrada del hero en CSS: arranca con la primera pintura de la página, sin
+   esperar al JavaScript, así se ve igual con señal lenta en el celular.
+   El retraso de cada elemento va en su clase [animation-delay:…]. */
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+}
+
+@keyframes hero-rise-lg {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+}
+
+@keyframes hero-zoom {
+  from {
+    opacity: 0;
+    transform: scale(1.06);
+  }
+}
+
+.hero-rise,
+.hero-rise-lg,
+.hero-zoom {
+  animation-duration: 0.8s;
+  animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  animation-fill-mode: backwards;
+}
+
+.hero-rise {
+  animation-name: hero-rise;
+}
+
+.hero-rise-lg {
+  animation-name: hero-rise-lg;
+  animation-duration: 1s;
+}
+
+.hero-zoom {
+  animation-name: hero-zoom;
+  animation-duration: 1.3s;
+}
+
 /* Respect reduced motion globally: fall back to instant, final-state visibility */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -63,6 +109,12 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
+  }
+
+  .hero-rise,
+  .hero-rise-lg,
+  .hero-zoom {
+    animation: none;
   }
 }
 
@@ -104,8 +156,11 @@ button {
   animation: marquee 28s linear infinite;
 }
 
-.marquee-track:hover {
-  animation-play-state: paused;
+/* Solo con mouse: en celular, tocar la cinta la dejaba congelada. */
+@media (hover: hover) and (pointer: fine) {
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
 }
 
 /* Cursor-following spotlight: set --mx/--my from JS on mousemove */
@@ -128,6 +183,8 @@ button {
   );
 }
 
-.spotlight-card:hover::before {
-  opacity: 1;
+@media (hover: hover) and (pointer: fine) {
+  .spotlight-card:hover::before {
+    opacity: 1;
+  }
 }

@@ -8,14 +8,19 @@ type HeroVideoProps = {
   poster: string;
   label: string;
   className?: string;
+  /** Arranca desde el HTML, sin esperar al JavaScript: para el video que se ve al abrir la página. */
+  autoPlay?: boolean;
 };
 
 /**
- * Same duotone/edge-fade treatment as ZoomImage, applied to a looping
- * muted video instead of a still photo. Offers a WebM source first (smaller,
- * and the only format some open-source browser builds decode) with MP4 as
- * the universally-supported fallback. Pauses under prefers-reduced-motion,
- * leaving the poster frame as a static shot.
+ * Video mudo en bucle con el mismo desvanecido de bordes que ZoomImage.
+ * Ofrece MP4 (H.264, el que mejor decodifican los celulares) y WebM de
+ * respaldo; cada navegador usa el primero que puede reproducir.
+ *
+ * Los celulares a veces bloquean o pausan el video (ahorro de batería, al
+ * cambiar de app, al salir de pantalla), así que solo se reproduce cuando
+ * está a la vista y se reintenta al volver a la página y al primer toque.
+ * Con prefers-reduced-motion se queda en el fotograma de portada.
  */
 export default function HeroVideo({
   webmSrc,
@@ -23,6 +28,7 @@ export default function HeroVideo({
   poster,
   label,
   className = "",
+  autoPlay = false,
 }: HeroVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [failed, setFailed] = useState(false);
@@ -39,9 +45,38 @@ export default function HeroVideo({
       return;
     }
 
-    video.play().catch(() => {
-      /* Autoplay can be blocked; the poster frame still renders. */
-    });
+    let inView = false;
+    const tryPlay = () => {
+      if (inView && video.paused && document.visibilityState === "visible") {
+        video.play().catch(() => {
+          /* Bloqueado por ahora: se reintenta en el siguiente evento. */
+        });
+      }
+    };
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        inView = entry.isIntersecting;
+        if (inView) tryPlay();
+        else video.pause();
+      },
+      { rootMargin: "200px 0px" }
+    );
+    observer.observe(video);
+
+    const retryEvents = ["pointerdown", "touchend", "click", "keydown"];
+    retryEvents.forEach((type) =>
+      window.addEventListener(type, tryPlay, { passive: true })
+    );
+    document.addEventListener("visibilitychange", tryPlay);
+    window.addEventListener("pageshow", tryPlay);
+
+    return () => {
+      observer.disconnect();
+      retryEvents.forEach((type) => window.removeEventListener(type, tryPlay));
+      document.removeEventListener("visibilitychange", tryPlay);
+      window.removeEventListener("pageshow", tryPlay);
+    };
   }, []);
 
   return (
@@ -54,12 +89,13 @@ export default function HeroVideo({
           muted
           loop
           playsInline
-          preload="metadata"
+          autoPlay={autoPlay}
+          preload={autoPlay ? "auto" : "metadata"}
           onError={() => setFailed(true)}
           className="absolute inset-0 h-full w-full object-cover"
         >
-          <source src={webmSrc} type="video/webm" />
-          <source src={mp4Src} type="video/mp4" />
+          <source src={mp4Src} type={'video/mp4; codecs="avc1.64001F"'} />
+          <source src={webmSrc} type={'video/webm; codecs="vp9"'} />
         </video>
       ) : (
         <div className="absolute inset-0 bg-[linear-gradient(135deg,var(--color-card),var(--color-muted))] flex items-center justify-center">

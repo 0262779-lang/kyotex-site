@@ -51,7 +51,7 @@ export default function FeatureGrid() {
             <div
               key={f.n}
               onMouseMove={onSpotlightMove}
-              className="spotlight-card reveal-item bg-card p-8 hover:bg-background hover:scale-[1.03] transition-[background-color,transform] duration-300"
+              className="spotlight-card reveal-item bg-card p-8 hover:bg-background hover:scale-[1.03] transition-[background-color,scale] duration-300"
             >
               <span className="font-display text-accent text-sm">{f.n}</span>
               <h3 className="font-display text-xl mt-4 mb-3">{f.title}</h3>
