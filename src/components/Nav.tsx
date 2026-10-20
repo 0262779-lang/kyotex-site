@@ -56,7 +56,7 @@ export default function Nav() {
         </a>
 
         <button
-          aria-label={open ? "Close menu" : "Open menu"}
+          aria-label={open ? "Cerrar menú" : "Abrir menú"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
           className="md:hidden w-11 h-11 flex items-center justify-center focus-ring rounded-sm"
@@ -93,7 +93,7 @@ export default function Nav() {
             onClick={() => setOpen(false)}
             className="inline-flex items-center justify-center h-12 px-6 border border-accent text-accent text-sm tracking-wide"
           >
-            Request a quote
+            Solicitar cotización
           </a>
         </nav>
       )}
