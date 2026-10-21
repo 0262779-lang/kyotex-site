@@ -7,7 +7,30 @@ export const SITE_URL = "https://kyotex.company";
 export const SITE_NAME = "Kyotex";
 export const ORG_NAME = "Kyotex-Terlan Norteamérica";
 
-export const SITE_TITLE =
-  "Kyotex-Terlan Norteamérica | Adhesivos ecológicos para calzado";
-export const SITE_DESCRIPTION =
-  "Kyotex-Terlan Norteamérica: adhesivos ecológicos sin solventes, termoadhesivos y maquinaria para calzado y marroquinería. Parte de ALC Gruppo desde 2006.";
+/** URL absoluta de una ruta del sitio (la raíz sin "/" final, igual que el canonical). */
+export function absoluteUrl(path: string) {
+  return path === "/" ? SITE_URL : `${SITE_URL}${path}`;
+}
+
+// Datos de contacto: se usan tal cual en el footer, la página de contacto y el schema.
+const ADDRESS_LINE =
+  "Calle 4 No. 2710-B, Colón Industrial, 44940 Guadalajara, Jalisco, México";
+
+export const BUSINESS = {
+  name: ORG_NAME,
+  addressLine: ADDRESS_LINE,
+  streetAddress: "Calle 4 No. 2710-B, Colón Industrial",
+  postalCode: "44940",
+  city: "Guadalajara",
+  region: "Jalisco",
+  countryCode: "MX",
+  phone: "+52 33 3645 0272",
+  phoneHref: "tel:+523336450272",
+  mapsUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+    ADDRESS_LINE
+  )}`,
+  areaServed: ["MX", "US", "CA"],
+} as const;
+
+/** Fecha real de la última actualización del contenido (para sitemap y schema). */
+export const CONTENT_UPDATED = "2026-10-21";

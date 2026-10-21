@@ -3,31 +3,9 @@
 import { useReveal } from "@/lib/useReveal";
 import { onSpotlightMove } from "@/lib/spotlight";
 import RevealHeading from "@/components/RevealHeading";
+import type { HomeCopy } from "@/content/home";
 
-const FEATURES = [
-  {
-    n: "01",
-    title: "Libre de solventes por diseño",
-    copy: "Menores emisiones de COV en planta, sin comprometer la fuerza de unión ni la velocidad de curado.",
-  },
-  {
-    n: "02",
-    title: "Diseñado para volumen",
-    copy: "Sistemas afinados para líneas de alto rendimiento de calzado y marroquinería, no solo para prototipos. Es el único adhesivo que puedes aplicar hoy y utilizarlo posteriormente.",
-  },
-  {
-    n: "03",
-    title: "Maquinaria fabricada internamente",
-    copy: "Los equipos de aplicación Kyo se diseñan junto a nuestros adhesivos — el sistema se concibe como uno solo.",
-  },
-  {
-    n: "04",
-    title: "Soporte técnico en planta",
-    copy: "Nuestro equipo calibra en sitio con tu línea de producción, no solo por correo.",
-  },
-];
-
-export default function FeatureGrid() {
+export default function FeatureGrid({ t }: { t: HomeCopy["features"] }) {
   const introRef = useReveal<HTMLDivElement>(".reveal-item");
   const ref = useReveal<HTMLDivElement>(".reveal-item", { stagger: 0.1 });
 
@@ -36,10 +14,10 @@ export default function FeatureGrid() {
       <div className="mx-auto max-w-7xl px-6 md:px-10">
         <div ref={introRef} className="max-w-2xl mb-16">
           <p className="reveal-item text-accent text-sm tracking-[0.3em] uppercase mb-4">
-            Por qué eligen Kyotex los fabricantes
+            {t.eyebrow}
           </p>
           <RevealHeading className="font-display text-[clamp(1.875rem,3vw+1.4rem,3rem)] leading-tight text-balance">
-            Diseñado para alta productividad y desarrollo fuera de la línea de producción.
+            {t.heading}
           </RevealHeading>
         </div>
 
@@ -47,7 +25,7 @@ export default function FeatureGrid() {
           ref={ref}
           className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border"
         >
-          {FEATURES.map((f) => (
+          {t.items.map((f) => (
             <div
               key={f.n}
               onMouseMove={onSpotlightMove}
@@ -55,9 +33,7 @@ export default function FeatureGrid() {
             >
               <span className="font-display text-accent text-sm">{f.n}</span>
               <h3 className="font-display text-xl mt-4 mb-3">{f.title}</h3>
-              <p className="text-secondary text-sm leading-relaxed">
-                {f.copy}
-              </p>
+              <p className="text-secondary text-sm leading-relaxed">{f.copy}</p>
             </div>
           ))}
         </div>

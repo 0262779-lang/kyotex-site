@@ -1,36 +1,38 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import type { SiteImage } from "@/content/images";
+import type { Locale } from "@/lib/i18n";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
 type ZoomImageProps = {
-  src: string;
-  alt: string;
+  image: SiteImage;
+  locale: Locale;
+  /** Ancho con el que se muestra, para que next/image sirva el tamaño justo. */
+  sizes: string;
   className?: string;
   /** Continuous slow "breathing" zoom, for hero-scale hold shots. */
   ambient?: boolean;
-  priority?: boolean;
 };
 
 /**
  * A photo that zooms in slightly as it scrolls into view, then (optionally)
- * keeps a slow ambient breathing zoom. A duotone treatment (grayscale +
- * brand-color overlay via mix-blend-mode) folds any source photo — studio
- * shot or editorial — into the site's own palette so nothing reads as
- * pasted in; hovering lifts the overlay to reveal true color. Falls back to
- * a branded gradient placeholder if the image fails to load.
+ * keeps a slow ambient breathing zoom. Served by next/image (AVIF/WebP at the
+ * right width). Falls back to a branded gradient placeholder if the image
+ * fails to load.
  */
 export default function ZoomImage({
-  src,
-  alt,
+  image,
+  locale,
+  sizes,
   className = "",
   ambient = false,
-  priority = false,
 }: ZoomImageProps) {
   const frameRef = useRef<HTMLDivElement>(null);
   const imgRef = useRef<HTMLImageElement>(null);
@@ -86,13 +88,14 @@ export default function ZoomImage({
   return (
     <div ref={frameRef} className={`group relative overflow-hidden ${className}`}>
       {!failed ? (
-        <img
+        <Image
           ref={imgRef}
-          src={src}
-          alt={alt}
-          loading={priority ? "eager" : "lazy"}
+          src={image.src}
+          alt={image.alt[locale]}
+          fill
+          sizes={sizes}
           onError={() => setFailed(true)}
-          className="absolute inset-0 h-full w-full object-cover will-change-transform"
+          className="object-cover will-change-transform"
         />
       ) : (
         <div className="absolute inset-0 bg-[linear-gradient(135deg,var(--color-card),var(--color-muted))] flex items-center justify-center">
