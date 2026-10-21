@@ -606,4 +606,501 @@ export const GUIDES_ES: Record<GuideId, GuideCopy> = {
       },
     ],
   },
+
+  insoling: {
+    title: "Qué es el emplantillado y cómo se hace en calzado | Kyotex",
+    description:
+      "Qué es el emplantillado, en qué etapa de la fabricación de calzado se hace y cómo se une la plantilla: con solvente, cinta PSA, termoadhesivo o en frío.",
+    h1: "Qué es el emplantillado y cómo se hace en la fabricación de calzado",
+    lead: "El emplantillado es el paso en el que la plantilla queda unida al zapato. Parece una operación sencilla, pero de ella dependen la comodidad, la apariencia interior del calzado y buena parte de los vapores que hay en la planta. Aquí explicamos en qué consiste, en qué momento de la fabricación se hace y qué métodos existen para hacerlo bien.",
+    cardText:
+      "En qué consiste el emplantillado, en qué etapa de la línea se hace y qué métodos existen para unir la plantilla.",
+    sections: [
+      {
+        heading: "Qué es la plantilla",
+        blocks: [
+          "En un zapato hay, por lo general, dos piezas a las que se les llama plantilla:",
+          {
+            list: [
+              "**La plantilla de armado o de montado:** la base firme sobre la que se monta el corte. Se fija a la horma antes del montado y queda oculta dentro del zapato.",
+              "**La plantilla interior o de confort:** la pieza que toca el pie. Puede llevar espuma, textil o piel, y se coloca cuando el zapato ya está armado.",
+            ],
+          },
+          "En el piso de producción, la palabra emplantillado se usa sobre todo para el segundo caso: colocar y pegar la plantilla interior dentro del zapato. Pero el principio es el mismo en los dos: unir la plantilla de forma firme, pareja y limpia, sin que se mueva, se arrugue o se despegue con el uso.",
+        ],
+      },
+      {
+        heading: "En qué etapa de la fabricación se hace",
+        blocks: [
+          "En la fabricación de calzado pegado, el orden más común es este:",
+          {
+            ordered: true,
+            list: [
+              "**Corte:** se cortan las piezas del corte, los forros y las plantillas.",
+              "**Pespunte:** se cosen las piezas del corte.",
+              "**Montado:** el corte se monta sobre la horma y se une a la plantilla de armado.",
+              "**Pegado de suela:** se une la suela al zapato montado.",
+              "**Deshormado:** se retira la horma.",
+              "**Emplantillado y acabado:** se coloca la plantilla interior, se limpia el zapato y se prepara para el empaque.",
+            ],
+          },
+          "Cada fábrica tiene sus variantes, pero el emplantillado casi siempre está cerca del final de la línea, cuando el zapato ya se ve terminado. Por eso un error en este paso se nota tanto: una plantilla mal pegada, arrugada o manchada llega directo a las manos del cliente.",
+        ],
+      },
+      {
+        heading: "Cómo se hace el emplantillado tradicional",
+        blocks: [
+          "El método tradicional usa pegamento líquido base solvente y sigue, más o menos, estos pasos:",
+          {
+            ordered: true,
+            list: [
+              "Se aplica el pegamento con brocha, rodillo o pistola en la plantilla, dentro del zapato o en ambos.",
+              "Se espera a que el solvente se evapore lo suficiente para que el pegamento esté listo.",
+              "Se coloca la plantilla, alineada con la forma del zapato.",
+              "Se presiona para asentarla, a mano o con una prensa.",
+            ],
+          },
+          "Funciona, pero tiene costos que se repiten en cada par: vapores de solventes en la línea, tiempo de espera, limpieza de brochas y recipientes y riesgo de manchas dentro del zapato. Lo explicamos a fondo en [cómo eliminar solventes en el emplantillado de calzado](/guias/como-eliminar-solventes-en-el-emplantillado-de-calzado).",
+        ],
+      },
+      {
+        heading: "Tres formas de emplantillar sin solventes",
+        blocks: [
+          "Kyotex trabaja tres tecnologías que unen la plantilla sin evaporar solventes:",
+          { h3: "Con cinta autoadhesiva PSA" },
+          "La cinta de [K System](/sistemas/k-system) lleva un adhesivo sólido que trabaja en frío y une con presión. Se aplica sobre el material con máquinas como la KYO100S o la KYO101, que trabajan anchos de hasta 145 mm. En la estación de emplantillado solo se retira el protector, se coloca la plantilla y se presiona: sin hornos, sin llama abierta y sin evaporación de solventes.",
+          { h3: "Con termoadhesivo" },
+          "Los termoadhesivos de [K Thermo](/sistemas/k-thermo) se funden con calor, se prensan y forman la unión al enfriarse. Según Kyotex, el emplantillado es donde el termoadhesivo en polvo alcanza su máxima expresión. Hace falta una fuente de calor y presión, y que los materiales toleren la temperatura de activación.",
+          { h3: "En frío, con fuerza estructural" },
+          "[K Next](/sistemas/k-next) ofrece la fuerza de un termoadhesivo sin calentar la pieza. ALC lo presentó como una cinta adhesiva a base de poliuretano para uniones estructurales, pensada para células de producción de alto rendimiento.",
+          "Para comparar estas opciones con calma, revisa la página de [emplantillado sin solventes](/aplicaciones/emplantillado-sin-solventes).",
+        ],
+      },
+      {
+        heading: "Preparar la plantilla fuera de la línea",
+        blocks: [
+          "Una ventaja de la cinta autoadhesiva es que separa el emplantillado en dos momentos. Primero, en el área de preparación, la cinta se aplica sobre el material de la plantilla con una máquina, de forma pareja y alineada. Después, en la línea, el operador solo retira el protector, coloca la plantilla y presiona.",
+          "Como el adhesivo ya viene formado, se puede aplicar hoy y usar después. Eso permite adelantar trabajo cuando hay capacidad y dejar en la línea únicamente el paso de colocar y presionar, que es rápido y no deja vapores.",
+        ],
+      },
+      {
+        heading: "Cómo lograr un emplantillado bien hecho",
+        blocks: [
+          "Sin importar el método, hay puntos que marcan la diferencia:",
+          {
+            list: [
+              "**Plantilla bien cortada.** Si no corresponde con la forma del zapato, se arruga o se levanta en las orillas.",
+              "**Interior limpio y seco.** El polvo, los restos de pegamento o la humedad reducen la adherencia de cualquier adhesivo.",
+              "**Buena alineación.** La plantilla debe quedar centrada, sin cubrir de más ni dejar huecos en el talón o en la punta.",
+              "**Presión pareja.** La presión tiene que llegar a toda la superficie, sobre todo a la punta y al talón, donde la plantilla suele despegarse primero.",
+              "**Tiempo de reposo.** Algunas uniones siguen ganando fuerza después de presionarlas; respeta el tiempo que indique el fabricante del adhesivo antes de empacar.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Problemas comunes y cómo detectarlos",
+        blocks: [
+          {
+            list: [
+              "**Despegue en las orillas o en el talón:** suele venir de poca presión, poco adhesivo en esa zona o superficies sucias.",
+              "**Arrugas o burbujas:** la plantilla no asentó bien o no corresponde con la forma del zapato.",
+              "**Manchas de pegamento:** casi siempre son exceso de pegamento líquido que se sale por las orillas. Con cinta o con termoadhesivo, la cantidad de adhesivo ya viene definida.",
+              "**Olor a solvente en el zapato terminado:** puede indicar que el solvente no terminó de evaporarse antes de empacar.",
+            ],
+          },
+          "Revisar algunos pares al azar en cada turno ayuda a detectar estos problemas antes de que lleguen al cliente, y a saber si el ajuste está en el adhesivo, en el equipo o en el método de trabajo.",
+        ],
+      },
+      {
+        heading: "Cómo elegir el método para tu línea",
+        blocks: [
+          "La elección depende de tus materiales, de si toleran el calor, del equipo que ya tienes y de tu volumen de producción. Si quieres profundizar, lee [emplantillado en frío: qué es y cuándo conviene](/guias/emplantillado-en-frio-que-es-y-cuando-conviene) y [cómo elegir el adhesivo según el material del calzado](/guias/como-elegir-el-adhesivo-segun-el-material-del-calzado).",
+          "Cuando quieras una recomendación para tu línea, [solicita una cotización](/contacto#cotizar). Kyotex-Terlan Norteamérica atiende desde Guadalajara, Jalisco, a fábricas de León, Guanajuato, y de todo México.",
+        ],
+      },
+    ],
+  },
+
+  reinforcements: {
+    title: "Punteras y contrafuertes para calzado: qué son y cómo se fijan",
+    description:
+      "Qué son las punteras y los contrafuertes, de qué se hacen, cómo se fijan con calor o con adhesivo en frío sin solventes y qué revisar para que no se marquen.",
+    h1: "Punteras y contrafuertes para calzado: qué son y cómo se fijan",
+    lead: "La puntera y el contrafuerte son refuerzos que casi nadie ve, pero que definen la forma del zapato: la puntera sostiene la punta y el contrafuerte, el talón. Esta guía explica qué son, de qué materiales se hacen y cómo se fijan, incluida la opción de hacerlo sin solventes.",
+    cardText:
+      "Qué son estos refuerzos, de qué materiales se hacen y cómo se fijan, incluida la opción sin solventes.",
+    sections: [
+      {
+        heading: "Qué es una puntera",
+        blocks: [
+          "La puntera es el refuerzo que va en la punta del zapato, entre el corte y el forro. Su trabajo es darle forma a la punta y ayudar a que la conserve con el uso, sin que se hunda ni se deforme cada vez que el pie empuja hacia adelante.",
+          "No hay que confundirla con el casquillo del calzado de seguridad. El casquillo es una pieza de protección; la puntera, en cambio, es un refuerzo de forma que se usa en todo tipo de calzado.",
+        ],
+      },
+      {
+        heading: "Qué es un contrafuerte",
+        blocks: [
+          "El contrafuerte va en la parte trasera del zapato, también entre el corte y el forro, rodeando el talón. Sostiene la forma de esa zona y ayuda a que el pie quede firme dentro del calzado.",
+          "Es una de las piezas que más trabajo recibe: cada vez que alguien se pone o se quita el zapato, el talón se dobla. Un contrafuerte bien elegido y bien fijado evita que esa zona se colapse con el tiempo.",
+        ],
+      },
+      {
+        heading: "De qué materiales se hacen",
+        blocks: [
+          "Hay refuerzos de muchos materiales. La unidad [K Pads](/sistemas/k-pads) de Kyotex desarrolla soportes de refuerzo para calzado y marroquinería, entre ellos:",
+          {
+            list: ["**Punteras.**", "**Contrafuertes de fibra de cuero.**", "**Microfibras.**"],
+          },
+          "Kyotex los hace con materiales naturales y reciclados tratados con sus termoadhesivos (hot melt) o con sus adhesivos en frío. Según la marca, ese tratamiento garantiza la ausencia de solventes y de compuestos orgánicos volátiles (COV).",
+          "La elección del material depende de qué tan firme debe quedar la pieza, del tipo de corte y de la comodidad que se busca: un refuerzo demasiado rígido sostiene bien la forma, pero puede incomodar; uno demasiado blando no la sostiene.",
+        ],
+      },
+      {
+        heading: "Cómo se fijan",
+        blocks: [
+          "Hay tres formas principales de fijar un refuerzo, según cómo se active su adhesivo:",
+          { h3: "Activados con solvente" },
+          "Es el método tradicional en algunos refuerzos: la pieza se humedece o se sumerge en solvente para ablandarla y activarla, se coloca y se monta. Como cualquier proceso con solvente, deja vapores en la planta y obliga a manejar tiempos de espera.",
+          { h3: "Con termoadhesivo" },
+          "El refuerzo ya trae el adhesivo aplicado. Se activa con calor, se coloca entre el corte y el forro y, al montarse y enfriarse, queda unido y con la forma de la horma. No hay solvente que evaporar.",
+          "Aquí importa respetar la temperatura y el tiempo de activación que indique el fabricante: si el adhesivo no se activa por completo, la unión queda débil; si se calienta de más, el material del corte o del forro puede dañarse.",
+          { h3: "Con adhesivo en frío" },
+          "El refuerzo trae un adhesivo que trabaja sin calor. Es útil cuando los materiales del corte o del forro no deben calentarse.",
+          "Los refuerzos K Pads vienen tratados con adhesivos Kyotex, en caliente o en frío, para que se integren a un proceso sin solventes.",
+        ],
+      },
+      {
+        heading: "El refuerzo empieza en el diseño del modelo",
+        blocks: [
+          "La forma y el tamaño de la puntera y del contrafuerte se definen junto con el patrón del modelo. Por eso, cuando cambia la horma o el patrón, conviene revisar también el refuerzo: una pieza que funcionaba bien en un modelo puede quedarse corta, sobrar o marcarse en otro.",
+          "También influye el corte: un material delgado deja ver más fácilmente las orillas del refuerzo que uno grueso, y un corte muy flexible necesita un refuerzo que sostenga la forma sin endurecer de más la pieza.",
+        ],
+      },
+      {
+        heading: "Paso a paso en la línea",
+        blocks: [
+          "El orden exacto depende de cada fábrica, pero el proceso suele seguir estos pasos:",
+          {
+            ordered: true,
+            list: [
+              "**Corte del refuerzo** con la forma del modelo.",
+              "**Rebajado de orillas,** para que el borde del refuerzo no se marque a través del corte.",
+              "**Activación del adhesivo,** con calor o en frío, según el tipo de refuerzo.",
+              "**Colocación** entre el corte y el forro, bien centrado en la punta o en el talón.",
+              "**Montado** sobre la horma, que le da la forma final.",
+              "**Reposo o enfriamiento,** para que el refuerzo conserve la forma que tomó en la horma.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Qué revisar para que el refuerzo funcione",
+        blocks: [
+          {
+            list: [
+              "**Que no se marque.** Si la orilla del refuerzo se nota por fuera, revisa el rebajado y la posición de la pieza.",
+              "**Que no se despegue.** Una activación incompleta o una presión dispareja dejan zonas sin unir.",
+              "**Que conserve la forma.** Después del uso, la punta y el talón deben recuperar su forma; si se hunden, el refuerzo puede ser demasiado delgado o no quedó bien unido.",
+              "**Que sea cómodo.** Un refuerzo demasiado rígido o mal colocado puede lastimar el pie.",
+            ],
+          },
+          "Igual que con cualquier adhesivo, la prueba final está en tu línea: fija los refuerzos con tus materiales y tu horma, y revísalos con tus pruebas de control de calidad.",
+        ],
+      },
+      {
+        heading: "Cuándo conviene revisar tus refuerzos",
+        blocks: [
+          {
+            list: [
+              "Cuando la orilla del refuerzo empieza a notarse por fuera del corte.",
+              "Cuando la punta o el talón pierden la forma antes de lo esperado.",
+              "Cuando todavía activas los refuerzos con solvente y quieres quitar esos vapores de la planta.",
+              "Cuando cambias de horma, de patrón o de material del corte.",
+              "Cuando buscas refuerzos hechos con materiales naturales y reciclados.",
+            ],
+          },
+          "En cualquiera de esos casos, la prueba se hace igual: con tus materiales, tu horma y tus pruebas de control de calidad.",
+        ],
+      },
+      {
+        heading: "Refuerzos para marroquinería",
+        blocks: [
+          "Los mismos principios aplican en bolsos, carteras y otros artículos de piel: los refuerzos dan cuerpo a la pieza y ayudan a que conserve su forma con el tiempo. K Pads desarrolla soportes de refuerzo también para el mercado de la marroquinería. Ver [adhesivos para marroquinería](/aplicaciones/marroquineria).",
+        ],
+      },
+      {
+        heading: "Siguiente paso",
+        blocks: [
+          "Si estás revisando cómo fijas tus refuerzos o quieres dejar los procesos con solvente, conoce [K Pads](/sistemas/k-pads), lee [cómo reducir emisiones de COV en una fábrica de calzado](/guias/como-reducir-emisiones-de-cov-en-una-fabrica-de-calzado) o [solicita una cotización](/contacto#cotizar): un especialista de Kyotex te ayuda a elegir el refuerzo para tu modelo.",
+        ],
+      },
+    ],
+  },
+
+  hotmeltTypes: {
+    title: "Tipos de hot melt para calzado: TPU, PES, EVA y PBS | Kyotex",
+    description:
+      "Qué distingue a los hot melt de TPU, PES, EVA y PBS para calzado, en qué presentaciones vienen y cómo elegir el adecuado para tus materiales y tu proceso.",
+    h1: "Tipos de hot melt para calzado: TPU, PES, EVA y PBS",
+    lead: "Todos los hot melt —o termoadhesivos— trabajan igual: se funden con calor, se prensan y unen al enfriarse. Lo que cambia es el polímero del que están hechos, y eso influye en qué tan flexible queda la unión, a qué temperatura se activa y con qué materiales funciona mejor. Kyotex trabaja en polvo cuatro polímeros: TPU, PES, PBS y EVA.",
+    cardText:
+      "Qué distingue a cada polímero, en qué presentaciones vienen y cómo elegir según tus materiales.",
+    sections: [
+      {
+        heading: "Lo que tienen en común",
+        blocks: [
+          "Un hot melt es un polímero termoplástico sin solvente. Kyotex resume su funcionamiento en tres pasos: **fundir, prensar y enfriar**. Como no lleva solvente, no hay que esperar a que nada se evapore; y como es termoplástico, el adhesivo se puede volver a ablandar con calor.",
+          "Esa última característica tiene dos caras: permite reactivar una unión, pero también significa que la unión terminada no debe exponerse a temperaturas cercanas a las de activación. Por eso conviene elegir el polímero pensando también en el uso final del calzado.",
+          "Además, todo lo que se aplica es adhesivo: no hay una parte que se evapore, así que en la estación no hay vapores de solvente. Lo que sí hay que cuidar es trabajar a la temperatura que indique el fabricante.",
+        ],
+      },
+      {
+        heading: "TPU: poliuretano termoplástico",
+        blocks: [
+          "El TPU es un poliuretano termoplástico. En general se elige cuando la unión debe quedar flexible y acompañar el movimiento del material, algo muy común en el calzado y en los textiles. En la industria del calzado, el TPU está entre las bases más usadas para las películas termoadhesivas.",
+          "Por esa flexibilidad, también es una opción a considerar cuando la unión debe resistir flexión repetida. Kyotex incluye el TPU en su gama de polvos termoadhesivos [K Thermo](/sistemas/k-thermo).",
+        ],
+      },
+      {
+        heading: "PES: copoliéster",
+        blocks: [
+          "El PES es un copoliéster termoplástico. Es una base versátil que se usa mucho para unir y laminar textiles y otros materiales.",
+          "En el calzado, es una opción a considerar para laminar forros y textiles. Kyotex también lo ofrece en polvo, dentro de K Thermo.",
+        ],
+      },
+      {
+        heading: "EVA: etileno-acetato de vinilo",
+        blocks: [
+          "El EVA es una de las bases más comunes para termoadhesivos. En general se activa a temperaturas más bajas que otras bases, lo que ayuda con materiales sensibles; a cambio, su unión suele resistir menos el calor una vez terminada.",
+          "Según Kyotex, el EVA en polvo se usa en grandes volúmenes en piel, calzado, filtración, artículos de viaje y alfombras.",
+        ],
+      },
+      {
+        heading: "PBS: polibutileno succinato",
+        blocks: [
+          "El PBS es un poliéster que Kyotex ofrece como la opción biodegradable de su gama de polvos. Es una alternativa para las marcas que buscan reducir el impacto ambiental de sus materiales, siempre que cumpla con lo que exige la pieza. Como con cualquier adhesivo, confirma con el proveedor cómo se comporta en tu proceso y cómo debe almacenarse.",
+        ],
+      },
+      {
+        heading: "Cómo elegir entre ellos",
+        blocks: [
+          "No hay un polímero mejor que los demás; hay uno más adecuado para cada caso. Antes de pedir muestras, revisa:",
+          {
+            list: [
+              "**Los materiales que vas a unir** y la temperatura que toleran.",
+              "**Qué tan flexible debe quedar la unión:** no es lo mismo una plantilla que un refuerzo.",
+              "**El uso final del calzado:** si estará expuesto al calor, a la humedad o a lavados.",
+              "**Tu equipo:** la prensa o la laminadora debe alcanzar la temperatura y la presión que pide el adhesivo.",
+              "**Tus metas ambientales:** si buscas una opción biodegradable, considera el PBS.",
+            ],
+          },
+          "Con esas respuestas, el proveedor puede recomendarte un polímero y una presentación. Después, confírmalo con una prueba en tu línea y con tus pruebas de control de calidad.",
+        ],
+      },
+      {
+        heading: "Presentaciones: polvo, película, velo, red y granulado",
+        blocks: [
+          "El polímero es solo la mitad de la elección; la otra mitad es la forma en que llega el adhesivo. K Thermo se ofrece en cinco presentaciones:",
+          {
+            list: [
+              "**Polvo:** se esparce sobre el material y se activa al prensar. Según Kyotex, el emplantillado es donde alcanza su máxima expresión.",
+              "**Película:** una capa continua de adhesivo.",
+              "**Velo:** una malla fina de fibras adhesivas.",
+              "**Red:** una malla abierta de adhesivo.",
+              "**Granulado:** se funde en un equipo antes de aplicarse.",
+            ],
+          },
+          "La película, el velo y la red son comunes en el [laminado](/aplicaciones/laminado); el polvo, en el [emplantillado sin solventes](/aplicaciones/emplantillado-sin-solventes).",
+        ],
+      },
+      {
+        heading: "Dónde se usan en el calzado",
+        blocks: [
+          {
+            list: [
+              "**Emplantillado:** polvo o película para unir la plantilla.",
+              "**Laminado:** para unir forros, textiles y sintéticos antes del corte.",
+              "**Refuerzos:** los refuerzos [K Pads](/sistemas/k-pads) vienen tratados con termoadhesivos o con adhesivos en frío Kyotex.",
+              "**Marroquinería:** Kyotex publica la unión de PVC y piel entre los usos de su gama de polvos.",
+            ],
+          },
+          "Kyotex también publica usos fuera del calzado, como la lencería y las telas elásticas, la industria automotriz y las alfombras.",
+        ],
+      },
+      {
+        heading: "Errores comunes al elegir un hot melt",
+        blocks: [
+          {
+            list: [
+              "**Elegir por costumbre.** El polímero que funcionó en un modelo no siempre sirve para otro con materiales distintos.",
+              "**Pensar solo en la prensa.** La unión también debe resistir lo que vivirá el calzado: flexión, calor, humedad o lavados.",
+              "**No ajustar el proceso.** Cada polímero pide su propia combinación de temperatura, presión y tiempo; usar la de otro adhesivo da uniones débiles.",
+              "**Probar solo recién prensado.** Evalúa también después de que la pieza se enfríe y repose.",
+              "**Revisar un solo lado.** El adhesivo tiene que funcionar con los dos materiales que une, no solo con uno.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Cómo hacer la prueba",
+        blocks: [
+          {
+            ordered: true,
+            list: [
+              "Usa los mismos materiales y el mismo modelo que produces hoy.",
+              "Ajusta temperatura, presión y tiempo según las indicaciones del fabricante del adhesivo.",
+              "Evalúa la unión después de enfriar y después del tiempo de reposo que uses normalmente.",
+              "Si la pieza se dobla al usarse, flexiónala antes de dar el resultado por bueno.",
+              "Compara contra tu método actual y anota los resultados de cada combinación.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "¿Y si el material no tolera el calor?",
+        blocks: [
+          "Entonces un hot melt no es la mejor opción. Revisa la cinta autoadhesiva de [K System](/sistemas/k-system) o la unión en frío de [K Next](/sistemas/k-next), y lee [cómo elegir el adhesivo según el material del calzado](/guias/como-elegir-el-adhesivo-segun-el-material-del-calzado).",
+        ],
+      },
+      {
+        heading: "Siguiente paso",
+        blocks: [
+          "Para comparar el hot melt con el pegamento tradicional, lee [termoadhesivo vs pegamento base solvente](/guias/termoadhesivo-vs-pegamento-base-solvente-en-calzado). Si ya sabes qué necesitas, [solicita una cotización](/contacto#cotizar) y un especialista de Kyotex te recomienda el polímero y la presentación para tu proceso.",
+        ],
+      },
+    ],
+  },
+
+  materials: {
+    title: "Cómo elegir el adhesivo según el material del calzado | Kyotex",
+    description:
+      "Cómo elegir el adhesivo para piel, sintéticos, textiles, espumas, plantillas y refuerzos: qué revisar en cada material y qué tecnología sin solventes probar.",
+    h1: "Cómo elegir el adhesivo según el material del calzado",
+    lead: "Un adhesivo que funciona bien en piel puede fallar en una espuma o en un sintético. Por eso, antes de elegir entre cinta PSA, termoadhesivo o unión en frío, hay que entender los materiales que se van a unir. Esta guía repasa los más comunes en el calzado, qué revisar en cada uno y qué tecnología sin solventes conviene probar.",
+    cardText:
+      "Qué revisar en piel, sintéticos, textiles, espumas, plantillas y refuerzos antes de elegir el adhesivo.",
+    sections: [
+      {
+        heading: "Por qué el material importa tanto",
+        blocks: [
+          "La unión se forma en la superficie. Para que un adhesivo trabaje, tiene que entrar en contacto estrecho con los dos materiales que une. Si una superficie es porosa, absorbe parte del adhesivo; si es muy lisa o tiene acabados, el adhesivo tiene menos de dónde agarrarse; y si tiene polvo, grasa o restos de otros productos, el adhesivo se pega a esa capa y no al material.",
+          "Por eso no existe un adhesivo universal para calzado: hay combinaciones de adhesivo y material que funcionan, y otras que conviene evitar.",
+        ],
+      },
+      {
+        heading: "Cuatro preguntas que valen para cualquier material",
+        blocks: [
+          {
+            ordered: true,
+            list: [
+              "**¿Es poroso o cerrado?** La piel, los textiles y los cartones absorben parte del adhesivo; los plásticos y los acabados lisos no.",
+              "**¿Tolera el calor?** Si se deforma, se encoge o se marca con la temperatura, descarta el termoadhesivo para esa unión.",
+              "**¿Qué tan flexible debe quedar la unión?** Las zonas que se doblan al caminar necesitan una unión que acompañe el movimiento.",
+              "**¿Tiene acabados, grasas o aditivos en la superficie?** Todo lo que quede entre el adhesivo y el material reduce la adherencia.",
+            ],
+          },
+          "Con esas respuestas ya puedes descartar opciones. Lo que quede, se confirma con una prueba en tu línea.",
+        ],
+      },
+      {
+        heading: "Piel",
+        blocks: [
+          "La piel es porosa y suele llevar acabados en la superficie que pueden dificultar la adherencia; por eso, en algunos procesos se prepara la zona de unión antes de pegar. Las pieles con acabados muy cerrados o con mucho engrase se comportan distinto de las más naturales, así que, si cambias de proveedor de piel, repite la prueba.",
+          "Para piel, Kyotex trabaja con las cintas PSA de [K System](/sistemas/k-system) —en marroquinería, con equipos como la KYO500 para piezas medianas y grandes— y con los termoadhesivos de [K Thermo](/sistemas/k-thermo). Entre los usos que publica Kyotex para sus polvos está la unión de PVC y piel, y el EVA en polvo se usa en grandes volúmenes en piel y calzado.",
+        ],
+      },
+      {
+        heading: "Sintéticos: PU y PVC",
+        blocks: [
+          "Los sintéticos tienen superficies más cerradas que la piel, y su tolerancia al calor cambia mucho de uno a otro. En algunos PVC flexibles, los plastificantes pueden migrar a la superficie con el tiempo y debilitar la unión, así que conviene probar el adhesivo y revisar la unión también después de un tiempo de reposo.",
+          "Si el sintético tolera la temperatura de activación, un termoadhesivo es una opción. Si no, revisa la cinta PSA o [K Next](/sistemas/k-next), que ofrece la fuerza de un termoadhesivo sin calor.",
+        ],
+      },
+      {
+        heading: "Textiles y forros",
+        blocks: [
+          "Los textiles son porosos y flexibles, y muchas veces se laminan antes de cortarse. Para eso se usan termoadhesivos en película, velo, red o polvo, que se reparten sobre la tela y se activan con calor y presión. Más información en [laminado](/aplicaciones/laminado).",
+          "Si la tela es elástica, la unión debe acompañar ese estiramiento. Kyotex publica la lencería y las telas elásticas entre los usos de su gama de polvos; para comparar polímeros, lee [tipos de hot melt para calzado](/guias/tipos-de-hot-melt-para-calzado-tpu-pes-eva-pbs).",
+        ],
+      },
+      {
+        heading: "Espumas",
+        blocks: [
+          "Las espumas de las plantillas y de los acolchados pueden aplastarse, encogerse o deformarse con el calor. Si la espuma no tolera la temperatura de activación de un termoadhesivo, conviene una unión en frío: la cinta PSA de K System o, si hace falta fuerza estructural, K Next.",
+          "Lee [emplantillado en frío: qué es y cuándo conviene](/guias/emplantillado-en-frio-que-es-y-cuando-conviene) para ver cómo funciona una estación sin calor.",
+        ],
+      },
+      {
+        heading: "Plantillas de armado y fibras",
+        blocks: [
+          "Las plantillas de armado y los materiales de fibra son porosos y firmes. Para unirlos sin solventes se usan la cinta autoadhesiva y el termoadhesivo en polvo, que según Kyotex alcanza su máxima expresión en el emplantillado. Lee [qué es el emplantillado y cómo se hace](/guias/que-es-el-emplantillado-y-como-se-hace).",
+        ],
+      },
+      {
+        heading: "Refuerzos",
+        blocks: [
+          "Las punteras, los contrafuertes y las microfibras de [K Pads](/sistemas/k-pads) ya vienen tratados con adhesivos Kyotex, en caliente o en frío, así que se integran a un proceso sin solventes. Lee [punteras y contrafuertes para calzado](/guias/punteras-y-contrafuertes-para-calzado).",
+        ],
+      },
+      {
+        heading: "Combinaciones comunes en el calzado",
+        blocks: [
+          "En la práctica casi nunca se une un solo material: se unen dos distintos. Algunas combinaciones frecuentes y qué revisar en cada una:",
+          {
+            list: [
+              "**Plantilla de confort sobre plantilla de armado:** la espuma o el textil de la plantilla interior manda; si no tolera calor, elige una unión en frío.",
+              "**Forro textil sobre piel o sintético:** el laminado con termoadhesivo es común; revisa que la unión quede flexible.",
+              "**Refuerzo entre corte y forro:** revisa que la activación no dañe ni el corte ni el forro.",
+              "**Piezas de marroquinería:** la cinta PSA evita el pegamento líquido; para piezas medianas y grandes existe la KYO500.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Resumen rápido",
+        blocks: [
+          {
+            list: [
+              "**Piel:** cinta PSA o termoadhesivo; revisa los acabados.",
+              "**Sintéticos:** termoadhesivo si toleran el calor; si no, cinta PSA o K Next. Prueba también después del reposo.",
+              "**Textiles y forros:** termoadhesivo en película, velo, red o polvo.",
+              "**Espumas:** unión en frío si no toleran el calor.",
+              "**Plantillas y fibras:** cinta PSA o termoadhesivo en polvo.",
+              "**Refuerzos:** K Pads, ya tratados con adhesivo.",
+            ],
+          },
+          "Cuando unes dos materiales distintos, el adhesivo tiene que funcionar con los dos: manda el más delicado.",
+        ],
+      },
+      {
+        heading: "Errores comunes",
+        blocks: [
+          {
+            list: [
+              "**Probar con un material y producir con otro.** Un cambio de proveedor o de acabado puede cambiar el resultado.",
+              "**Olvidar la humedad.** Un material húmedo o recién almacenado en un lugar húmedo no se comporta igual que uno seco.",
+              "**Revisar solo al momento.** Algunas uniones cambian con el reposo; evalúa también después.",
+              "**Elegir el adhesivo antes que el proceso.** Primero define si tu línea puede usar calor, y luego elige la tecnología.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Cómo confirmar la elección",
+        blocks: [
+          {
+            ordered: true,
+            list: [
+              "Prueba con los mismos materiales y el mismo modelo que produces.",
+              "Usa las pruebas de adherencia de tu control de calidad.",
+              "Evalúa también después del reposo y, si aplica, después de flexionar la pieza.",
+              "Registra los resultados de cada combinación de materiales para no repetir pruebas.",
+            ],
+          },
+          "Cuando tengas tus materiales identificados, [solicita una cotización](/contacto#cotizar): un especialista de Kyotex te ayuda a elegir el sistema. También puedes revisar todos los [sistemas Kyotex](/sistemas).",
+        ],
+      },
+    ],
+  },
 };

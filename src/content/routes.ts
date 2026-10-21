@@ -38,7 +38,16 @@ export function applicationPaths(id: ApplicationId): PathPair {
   return { es: `/aplicaciones/${slug.es}`, en: `/en/applications/${slug.en}` };
 }
 
-export type GuideId = "solvents" | "hotmelt" | "psa" | "voc" | "cold";
+export type GuideId =
+  | "solvents"
+  | "hotmelt"
+  | "psa"
+  | "voc"
+  | "cold"
+  | "insoling"
+  | "reinforcements"
+  | "hotmeltTypes"
+  | "materials";
 export const GUIDE_SLUGS: Record<GuideId, Localized<string>> = {
   solvents: {
     es: "como-eliminar-solventes-en-el-emplantillado-de-calzado",
@@ -59,6 +68,22 @@ export const GUIDE_SLUGS: Record<GuideId, Localized<string>> = {
   cold: {
     es: "emplantillado-en-frio-que-es-y-cuando-conviene",
     en: "cold-insole-bonding-what-it-is-and-when-to-use-it",
+  },
+  insoling: {
+    es: "que-es-el-emplantillado-y-como-se-hace",
+    en: "insole-bonding-in-shoe-manufacturing",
+  },
+  reinforcements: {
+    es: "punteras-y-contrafuertes-para-calzado",
+    en: "toe-puffs-and-heel-counters-for-footwear",
+  },
+  hotmeltTypes: {
+    es: "tipos-de-hot-melt-para-calzado-tpu-pes-eva-pbs",
+    en: "types-of-hot-melt-adhesive-for-footwear",
+  },
+  materials: {
+    es: "como-elegir-el-adhesivo-segun-el-material-del-calzado",
+    en: "how-to-choose-a-shoe-adhesive-by-material",
   },
 };
 export const GUIDE_IDS = Object.keys(GUIDE_SLUGS) as GuideId[];

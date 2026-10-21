@@ -3,11 +3,10 @@
 import { useState, type FormEvent } from "react";
 import type { QuoteFormCopy } from "@/content/home";
 import type { Locale } from "@/lib/i18n";
+import { BUSINESS } from "@/lib/site";
 
-// La solicitud llega por correo (FormSubmit) y por WhatsApp al número que dio
-// el dueño para recibir cotizaciones. No se muestra como dato de contacto.
+// La solicitud llega por correo (FormSubmit) y por WhatsApp al número de la empresa.
 const QUOTE_EMAIL = "logistics.support.terlan@gmail.com";
-const QUOTE_WHATSAPP = "523335981722";
 
 const FIELD =
   "w-full h-14 px-5 bg-background border border-border text-foreground placeholder:text-muted-foreground focus-ring rounded-sm";
@@ -60,7 +59,7 @@ export default function QuoteForm({
         message || t.noDetail
       }`
     );
-    window.open(`https://wa.me/${QUOTE_WHATSAPP}?text=${waText}`, "_blank");
+    window.open(`https://wa.me/${BUSINESS.whatsappNumber}?text=${waText}`, "_blank");
 
     setStatus("submitted");
   }
@@ -75,7 +74,7 @@ export default function QuoteForm({
   }
 
   return (
-    <form onSubmit={handleSubmit} className={`grid gap-3 text-left ${className}`}>
+    <form onSubmit={handleSubmit} data-quote-form className={`grid gap-3 text-left ${className}`}>
       <div className="grid sm:grid-cols-2 gap-3">
         <div>
           <label htmlFor="name" className="sr-only">

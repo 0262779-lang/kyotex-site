@@ -26,11 +26,18 @@ export const BUSINESS = {
   countryCode: "MX",
   phone: "+52 33 3645 0272",
   phoneHref: "tel:+523336450272",
+  whatsapp: "+52 33 3598 1722",
+  whatsappNumber: "523335981722",
   mapsUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
     ADDRESS_LINE
   )}`,
   areaServed: ["MX", "US", "CA"],
 } as const;
+
+/** Enlace de WhatsApp (wa.me) con un mensaje listo para enviar. */
+export function whatsappHref(message: string) {
+  return `https://wa.me/${BUSINESS.whatsappNumber}?text=${encodeURIComponent(message)}`;
+}
 
 /** Fecha real de la última actualización del contenido (para sitemap y schema). */
 export const CONTENT_UPDATED = "2026-10-21";

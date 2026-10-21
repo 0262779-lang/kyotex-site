@@ -179,10 +179,12 @@ export const GUIDES_HUB: Localized<PageCopy & { cardsHeading: string }> = {
         blocks: [
           {
             list: [
-              "Si apenas estás evaluando el cambio, empieza por [cómo eliminar solventes en el emplantillado de calzado](/guias/como-eliminar-solventes-en-el-emplantillado-de-calzado).",
+              "Si eres nuevo en el tema, empieza por [qué es el emplantillado y cómo se hace](/guias/que-es-el-emplantillado-y-como-se-hace) y [cómo elegir el adhesivo según el material del calzado](/guias/como-elegir-el-adhesivo-segun-el-material-del-calzado).",
+              "Si apenas estás evaluando el cambio, sigue con [cómo eliminar solventes en el emplantillado de calzado](/guias/como-eliminar-solventes-en-el-emplantillado-de-calzado).",
               "Si quieres comparar tecnologías, lee [termoadhesivo vs pegamento base solvente](/guias/termoadhesivo-vs-pegamento-base-solvente-en-calzado) y [qué es un adhesivo PSA](/guias/que-es-un-adhesivo-psa-y-como-se-usa-en-calzado).",
               "Si tu prioridad es el aire de la planta, ve a [cómo reducir emisiones de COV](/guias/como-reducir-emisiones-de-cov-en-una-fabrica-de-calzado).",
               "Si tus materiales no toleran calor, revisa [emplantillado en frío](/guias/emplantillado-en-frio-que-es-y-cuando-conviene).",
+              "Para refuerzos y termoadhesivos, lee [punteras y contrafuertes para calzado](/guias/punteras-y-contrafuertes-para-calzado) y [tipos de hot melt: TPU, PES, EVA y PBS](/guias/tipos-de-hot-melt-para-calzado-tpu-pes-eva-pbs).",
             ],
           },
         ],
@@ -203,10 +205,12 @@ export const GUIDES_HUB: Localized<PageCopy & { cardsHeading: string }> = {
         blocks: [
           {
             list: [
-              "Just exploring the switch? Start with [how to remove solvents from insole bonding](/en/guides/how-to-remove-solvents-from-insole-bonding).",
+              "New to the topic? Start with [what insole bonding is and how it's done](/en/guides/insole-bonding-in-shoe-manufacturing) and [how to choose a shoe adhesive by material](/en/guides/how-to-choose-a-shoe-adhesive-by-material).",
+              "Just exploring the switch? Continue with [how to remove solvents from insole bonding](/en/guides/how-to-remove-solvents-from-insole-bonding).",
               "Comparing technologies? Read [hot melt vs. solvent-based shoe adhesive](/en/guides/hot-melt-vs-solvent-based-shoe-adhesive) and [what a PSA adhesive is](/en/guides/what-is-a-psa-adhesive-in-footwear).",
               "Focused on air quality and compliance? Go to [how to reduce VOC emissions in a shoe factory](/en/guides/how-to-reduce-voc-emissions-in-a-shoe-factory).",
               "Materials that can't take heat? See [cold insole bonding](/en/guides/cold-insole-bonding-what-it-is-and-when-to-use-it).",
+              "Working on reinforcements or hot melts? Read [toe puffs and heel counters](/en/guides/toe-puffs-and-heel-counters-for-footwear) and [hot melt adhesive types: TPU, PES, EVA and PBS](/en/guides/types-of-hot-melt-adhesive-for-footwear).",
             ],
           },
         ],

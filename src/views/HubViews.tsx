@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import PageShell from "@/components/PageShell";
+import CatalogDownload from "@/components/CatalogDownload";
 import { BUTTON_PRIMARY, CardGrid, PageHeader } from "@/components/PageParts";
 import { UI } from "@/content/ui";
 import { IMAGES } from "@/content/images";
@@ -68,6 +69,7 @@ export function SystemsHubView({ locale }: { locale: Locale }) {
             },
           ]}
         />
+        <CatalogDownload locale={locale} className="mt-10" />
       </CardsSection>
       <Body sections={copy.sections} />
       <Related

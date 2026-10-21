@@ -2,7 +2,7 @@ import Link from "next/link";
 import { UI } from "@/content/ui";
 import { PAGES } from "@/content/routes";
 import { HTML_LANG, otherLocale, type Locale } from "@/lib/i18n";
-import { BUSINESS } from "@/lib/site";
+import { BUSINESS, whatsappHref } from "@/lib/site";
 
 /** Footer con los datos de contacto exactos y enlaces a todas las secciones. */
 export default function SiteFooter({
@@ -38,6 +38,17 @@ export default function SiteFooter({
                 className="text-foreground underline underline-offset-4 hover:text-accent focus-ring rounded-sm"
               >
                 {BUSINESS.phone}
+              </a>
+            </p>
+            <p className="text-secondary">
+              {t.whatsapp.label}{" "}
+              <a
+                href={whatsappHref(t.whatsapp.message)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground underline underline-offset-4 hover:text-accent focus-ring rounded-sm"
+              >
+                {BUSINESS.whatsapp}
               </a>
             </p>
           </address>

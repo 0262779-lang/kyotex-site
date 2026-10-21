@@ -1,7 +1,7 @@
 import { UI } from "@/content/ui";
 import { CONTACT } from "@/content/pages";
 import type { Locale } from "@/lib/i18n";
-import { BUSINESS } from "@/lib/site";
+import { BUSINESS, whatsappHref } from "@/lib/site";
 
 /** Nombre, dirección y teléfono exactos, con enlace "Cómo llegar". */
 export default function NapBlock({ locale }: { locale: Locale }) {
@@ -18,6 +18,17 @@ export default function NapBlock({ locale }: { locale: Locale }) {
             className="text-foreground underline underline-offset-4 hover:text-accent focus-ring rounded-sm"
           >
             {BUSINESS.phone}
+          </a>
+        </p>
+        <p className="text-secondary">
+          {UI[locale].whatsapp.label}{" "}
+          <a
+            href={whatsappHref(UI[locale].whatsapp.message)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground underline underline-offset-4 hover:text-accent focus-ring rounded-sm"
+          >
+            {BUSINESS.whatsapp}
           </a>
         </p>
       </address>

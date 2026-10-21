@@ -22,6 +22,11 @@ export const UI = {
     // Va en el idioma de destino porque el enlace lleva lang="en".
     langAria: "View this page in English",
     breadcrumbAria: "Migas de pan",
+    whatsapp: {
+      label: "WhatsApp",
+      aria: "Escríbenos por WhatsApp (se abre en una pestaña nueva)",
+      message: "Hola, quiero información sobre los sistemas Kyotex",
+    },
     footer: {
       tagline:
         "Sistemas adhesivos sin solventes, termoadhesivos y maquinaria para la manufactura de calzado y marroquinería.",
@@ -101,6 +106,11 @@ export const UI = {
     langLong: "Español",
     langAria: "Ver esta página en español",
     breadcrumbAria: "Breadcrumb",
+    whatsapp: {
+      label: "WhatsApp",
+      aria: "Message us on WhatsApp (opens in a new tab)",
+      message: "Hello, I would like information about Kyotex systems",
+    },
     footer: {
       tagline:
         "Solvent-free adhesive systems, hot melt adhesives and application machinery for footwear and leather goods manufacturing.",

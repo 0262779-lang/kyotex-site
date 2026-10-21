@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import PageShell from "@/components/PageShell";
 import { PageHeader } from "@/components/PageParts";
 import NapBlock from "@/components/NapBlock";
+import CatalogDownload from "@/components/CatalogDownload";
 import QuoteForm from "@/components/QuoteForm";
 import { inline } from "@/components/RichText";
 import { UI } from "@/content/ui";
@@ -49,6 +50,7 @@ export function ContactView({ locale }: { locale: Locale }) {
                 {copy.addressHeading}
               </h2>
               <NapBlock locale={locale} />
+              <CatalogDownload locale={locale} className="mt-6" />
             </div>
             <div className="prose-k">
               <h2>{copy.includeHeading}</h2>

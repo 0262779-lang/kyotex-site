@@ -96,16 +96,18 @@ export function GuideView({ locale, id }: { locale: Locale; id: GuideId }) {
           </p>
         </PageHeader>
 
-        <section className="pt-12 md:pt-16">
-          <div className="mx-auto max-w-7xl px-6 md:px-10">
-            <Figure
-              image={IMAGES[entry.image]}
-              locale={locale}
-              sizes="(min-width: 768px) 768px, 100vw"
-              className="max-w-3xl"
-            />
-          </div>
-        </section>
+        {entry.showFigure && (
+          <section className="pt-12 md:pt-16">
+            <div className="mx-auto max-w-7xl px-6 md:px-10">
+              <Figure
+                image={IMAGES[entry.image]}
+                locale={locale}
+                sizes="(min-width: 768px) 768px, 100vw"
+                className="max-w-3xl"
+              />
+            </div>
+          </section>
+        )}
 
         <Body sections={copy.sections} />
       </article>

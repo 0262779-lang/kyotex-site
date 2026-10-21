@@ -35,7 +35,7 @@ export const SYSTEMS: Record<SystemSlug, SystemEntry> = {
     ogImage: "insoleTape",
     related: {
       applications: ["insole", "leather"],
-      guides: ["psa", "solvents", "cold"],
+      guides: ["insoling", "psa", "solvents"],
       systems: ["k-thermo", "k-next"],
     },
     copy: {
@@ -189,7 +189,7 @@ export const SYSTEMS: Record<SystemSlug, SystemEntry> = {
     ogImage: "heroPoster",
     related: {
       applications: ["insole", "lamination", "leather"],
-      guides: ["hotmelt", "voc"],
+      guides: ["hotmeltTypes", "hotmelt", "voc"],
       systems: ["k-next", "k-system"],
     },
     copy: {
@@ -331,7 +331,7 @@ export const SYSTEMS: Record<SystemSlug, SystemEntry> = {
     ogImage: "heroPoster",
     related: {
       applications: ["insole", "leather"],
-      guides: ["cold", "solvents"],
+      guides: ["cold", "materials", "solvents"],
       systems: ["k-thermo", "k-system"],
     },
     copy: {
@@ -451,7 +451,7 @@ export const SYSTEMS: Record<SystemSlug, SystemEntry> = {
     ogImage: "heroPoster",
     related: {
       applications: ["leather", "insole"],
-      guides: ["voc", "solvents"],
+      guides: ["reinforcements", "voc", "solvents"],
       systems: ["k-thermo", "k-system"],
     },
     copy: {
